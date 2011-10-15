@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0411D5A142D5CF000A93374 /* MyTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0411D58142D5CF000A93374 /* MyTableViewCell.mm */; };
+		E0BFF28C1426B62D00A1441B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28B1426B62D00A1441B /* UIKit.framework */; };
+		E0BFF28E1426B62D00A1441B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28D1426B62D00A1441B /* Foundation.framework */; };
+		E0BFF2901426B62D00A1441B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28F1426B62D00A1441B /* CoreGraphics.framework */; };
+		E0BFF2961426B62D00A1441B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0BFF2941426B62D00A1441B /* InfoPlist.strings */; };
+		E0BFF29C1426B62D00A1441B /* MyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF29B1426B62D00A1441B /* MyAppDelegate.mm */; };
+		E0BFF29F1426B62D00A1441B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0BFF29D1426B62D00A1441B /* MainWindow.xib */; };
+		E0BFF2A51426B62D00A1441B /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0BFF2A31426B62D00A1441B /* DetailView.xib */; };
+		E0BFF2A81426B62D00A1441B /* MyRootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2A71426B62D00A1441B /* MyRootViewController.mm */; };
+		E0BFF2C71426B6D100A1441B /* CCGLTouchAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C11426B6D100A1441B /* CCGLTouchAppDelegate.mm */; };
+		E0BFF2C81426B6D100A1441B /* CCGLTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C31426B6D100A1441B /* CCGLTouchView.mm */; };
+		E0BFF2C91426B6D100A1441B /* CCGLTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C51426B6D100A1441B /* CCGLTouchViewController.mm */; };
+		E0BFF2CA1426B6D100A1441B /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C61426B6D100A1441B /* main.mm */; };
+		E0BFF2D01426B75600A1441B /* MyDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2CC1426B75600A1441B /* MyDetailViewController.mm */; };
+		E0BFF2D21426B75600A1441B /* MyCinderGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2CF1426B75600A1441B /* MyCinderGLView.mm */; };
+		E0BFF2E31426B79C00A1441B /* libcinder-iphone_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D31426B79C00A1441B /* libcinder-iphone_d.a */; };
+		E0BFF2E41426B79C00A1441B /* libcinder-iphone-sim_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D41426B79C00A1441B /* libcinder-iphone-sim_d.a */; };
+		E0BFF2E51426B79C00A1441B /* libcinder-iphone-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D51426B79C00A1441B /* libcinder-iphone-sim.a */; };
+		E0BFF2E61426B79C00A1441B /* libcinder-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D61426B79C00A1441B /* libcinder-iphone.a */; };
+		E0BFF2E71426B79C00A1441B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D71426B79C00A1441B /* QuartzCore.framework */; };
+		E0BFF2E81426B79C00A1441B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D81426B79C00A1441B /* OpenGLES.framework */; };
+		E0BFF2E91426B79C00A1441B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D91426B79C00A1441B /* UIKit.framework */; };
+		E0BFF2EA1426B79C00A1441B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DA1426B79C00A1441B /* Foundation.framework */; };
+		E0BFF2EB1426B79C00A1441B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DB1426B79C00A1441B /* CoreGraphics.framework */; };
+		E0BFF2EC1426B79C00A1441B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DC1426B79C00A1441B /* AudioToolbox.framework */; };
+		E0BFF2ED1426B79C00A1441B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DD1426B79C00A1441B /* libz.dylib */; };
+		E0BFF2EE1426B79C00A1441B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DE1426B79C00A1441B /* CoreVideo.framework */; };
+		E0BFF2EF1426B79C00A1441B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DF1426B79C00A1441B /* AVFoundation.framework */; };
+		E0BFF2F01426B79C00A1441B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2E01426B79C00A1441B /* CoreMedia.framework */; };
+		E0BFF2F11426B79C00A1441B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2E11426B79C00A1441B /* CoreText.framework */; };
+		E0BFF2F21426B79C00A1441B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2E21426B79C00A1441B /* SenTestingKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E0411D57142D5CF000A93374 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		E0411D58142D5CF000A93374 /* MyTableViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyTableViewCell.mm; sourceTree = "<group>"; };
+		E0BFF2871426B62D00A1441B /* CCGLTouchSplitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCGLTouchSplitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0BFF28B1426B62D00A1441B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E0BFF28D1426B62D00A1441B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E0BFF28F1426B62D00A1441B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E0BFF2931426B62D00A1441B /* CCGLTouchSplitView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCGLTouchSplitView-Info.plist"; sourceTree = "<group>"; };
+		E0BFF2951426B62D00A1441B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E0BFF2991426B62D00A1441B /* CCGLTouchSplitView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCGLTouchSplitView-Prefix.pch"; sourceTree = "<group>"; };
+		E0BFF29A1426B62D00A1441B /* MyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAppDelegate.h; sourceTree = "<group>"; };
+		E0BFF29B1426B62D00A1441B /* MyAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyAppDelegate.mm; sourceTree = "<group>"; };
+		E0BFF29E1426B62D00A1441B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		E0BFF2A41426B62D00A1441B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailView.xib; sourceTree = "<group>"; };
+		E0BFF2A61426B62D00A1441B /* MyRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRootViewController.h; sourceTree = "<group>"; };
+		E0BFF2A71426B62D00A1441B /* MyRootViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyRootViewController.mm; sourceTree = "<group>"; };
+		E0BFF2C01426B6D100A1441B /* CCGLTouchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGLTouchAppDelegate.h; sourceTree = "<group>"; };
+		E0BFF2C11426B6D100A1441B /* CCGLTouchAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCGLTouchAppDelegate.mm; sourceTree = "<group>"; };
+		E0BFF2C21426B6D100A1441B /* CCGLTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGLTouchView.h; sourceTree = "<group>"; };
+		E0BFF2C31426B6D100A1441B /* CCGLTouchView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCGLTouchView.mm; sourceTree = "<group>"; };
+		E0BFF2C41426B6D100A1441B /* CCGLTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGLTouchViewController.h; sourceTree = "<group>"; };
+		E0BFF2C51426B6D100A1441B /* CCGLTouchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCGLTouchViewController.mm; sourceTree = "<group>"; };
+		E0BFF2C61426B6D100A1441B /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		E0BFF2CB1426B75600A1441B /* MyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDetailViewController.h; sourceTree = "<group>"; };
+		E0BFF2CC1426B75600A1441B /* MyDetailViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyDetailViewController.mm; sourceTree = "<group>"; };
+		E0BFF2CE1426B75600A1441B /* MyCinderGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCinderGLView.h; sourceTree = "<group>"; };
+		E0BFF2CF1426B75600A1441B /* MyCinderGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyCinderGLView.mm; sourceTree = "<group>"; };
+		E0BFF2D31426B79C00A1441B /* libcinder-iphone_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone_d.a"; path = "../../lib/libcinder-iphone_d.a"; sourceTree = "<group>"; };
+		E0BFF2D41426B79C00A1441B /* libcinder-iphone-sim_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim_d.a"; path = "../../lib/libcinder-iphone-sim_d.a"; sourceTree = "<group>"; };
+		E0BFF2D51426B79C00A1441B /* libcinder-iphone-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim.a"; path = "../../lib/libcinder-iphone-sim.a"; sourceTree = "<group>"; };
+		E0BFF2D61426B79C00A1441B /* libcinder-iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone.a"; path = "../../lib/libcinder-iphone.a"; sourceTree = "<group>"; };
+		E0BFF2D71426B79C00A1441B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E0BFF2D81426B79C00A1441B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E0BFF2D91426B79C00A1441B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E0BFF2DA1426B79C00A1441B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E0BFF2DB1426B79C00A1441B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E0BFF2DC1426B79C00A1441B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../../../../../System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
+		E0BFF2DD1426B79C00A1441B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../../../usr/lib/libz.dylib; sourceTree = "<group>"; };
+		E0BFF2DE1426B79C00A1441B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E0BFF2DF1426B79C00A1441B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E0BFF2E01426B79C00A1441B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E0BFF2E11426B79C00A1441B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		E0BFF2E21426B79C00A1441B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0BFF2841426B62D00A1441B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0BFF28C1426B62D00A1441B /* UIKit.framework in Frameworks */,
+				E0BFF28E1426B62D00A1441B /* Foundation.framework in Frameworks */,
+				E0BFF2901426B62D00A1441B /* CoreGraphics.framework in Frameworks */,
+				E0BFF2E31426B79C00A1441B /* libcinder-iphone_d.a in Frameworks */,
+				E0BFF2E41426B79C00A1441B /* libcinder-iphone-sim_d.a in Frameworks */,
+				E0BFF2E51426B79C00A1441B /* libcinder-iphone-sim.a in Frameworks */,
+				E0BFF2E61426B79C00A1441B /* libcinder-iphone.a in Frameworks */,
+				E0BFF2E71426B79C00A1441B /* QuartzCore.framework in Frameworks */,
+				E0BFF2E81426B79C00A1441B /* OpenGLES.framework in Frameworks */,
+				E0BFF2E91426B79C00A1441B /* UIKit.framework in Frameworks */,
+				E0BFF2EA1426B79C00A1441B /* Foundation.framework in Frameworks */,
+				E0BFF2EB1426B79C00A1441B /* CoreGraphics.framework in Frameworks */,
+				E0BFF2EC1426B79C00A1441B /* AudioToolbox.framework in Frameworks */,
+				E0BFF2ED1426B79C00A1441B /* libz.dylib in Frameworks */,
+				E0BFF2EE1426B79C00A1441B /* CoreVideo.framework in Frameworks */,
+				E0BFF2EF1426B79C00A1441B /* AVFoundation.framework in Frameworks */,
+				E0BFF2F01426B79C00A1441B /* CoreMedia.framework in Frameworks */,
+				E0BFF2F11426B79C00A1441B /* CoreText.framework in Frameworks */,
+				E0BFF2F21426B79C00A1441B /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E0BFF27C1426B62D00A1441B = {
+			isa = PBXGroup;
+			children = (
+				E0BFF2AE1426B64100A1441B /* MyAssets */,
+				E0BFF2911426B62D00A1441B /* MyClasses */,
+				E0BFF2BF1426B6D100A1441B /* CCGLTouchCore */,
+				E0BFF2921426B62D00A1441B /* Supporting Files */,
+				E0BFF28A1426B62D00A1441B /* Frameworks */,
+				E0BFF2881426B62D00A1441B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0BFF2881426B62D00A1441B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0BFF2871426B62D00A1441B /* CCGLTouchSplitView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0BFF28A1426B62D00A1441B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0BFF2D31426B79C00A1441B /* libcinder-iphone_d.a */,
+				E0BFF2D41426B79C00A1441B /* libcinder-iphone-sim_d.a */,
+				E0BFF2D51426B79C00A1441B /* libcinder-iphone-sim.a */,
+				E0BFF2D61426B79C00A1441B /* libcinder-iphone.a */,
+				E0BFF2D71426B79C00A1441B /* QuartzCore.framework */,
+				E0BFF2D81426B79C00A1441B /* OpenGLES.framework */,
+				E0BFF2D91426B79C00A1441B /* UIKit.framework */,
+				E0BFF2DA1426B79C00A1441B /* Foundation.framework */,
+				E0BFF2DB1426B79C00A1441B /* CoreGraphics.framework */,
+				E0BFF2DC1426B79C00A1441B /* AudioToolbox.framework */,
+				E0BFF2DD1426B79C00A1441B /* libz.dylib */,
+				E0BFF2DE1426B79C00A1441B /* CoreVideo.framework */,
+				E0BFF2DF1426B79C00A1441B /* AVFoundation.framework */,
+				E0BFF2E01426B79C00A1441B /* CoreMedia.framework */,
+				E0BFF2E11426B79C00A1441B /* CoreText.framework */,
+				E0BFF2E21426B79C00A1441B /* SenTestingKit.framework */,
+				E0BFF28B1426B62D00A1441B /* UIKit.framework */,
+				E0BFF28D1426B62D00A1441B /* Foundation.framework */,
+				E0BFF28F1426B62D00A1441B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0BFF2911426B62D00A1441B /* MyClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E0BFF29A1426B62D00A1441B /* MyAppDelegate.h */,
+				E0BFF29B1426B62D00A1441B /* MyAppDelegate.mm */,
+				E0BFF29D1426B62D00A1441B /* MainWindow.xib */,
+				E0BFF2A31426B62D00A1441B /* DetailView.xib */,
+				E0BFF2CB1426B75600A1441B /* MyDetailViewController.h */,
+				E0BFF2CC1426B75600A1441B /* MyDetailViewController.mm */,
+				E0BFF2CE1426B75600A1441B /* MyCinderGLView.h */,
+				E0BFF2CF1426B75600A1441B /* MyCinderGLView.mm */,
+				E0BFF2A61426B62D00A1441B /* MyRootViewController.h */,
+				E0BFF2A71426B62D00A1441B /* MyRootViewController.mm */,
+				E0411D57142D5CF000A93374 /* MyTableViewCell.h */,
+				E0411D58142D5CF000A93374 /* MyTableViewCell.mm */,
+			);
+			name = MyClasses;
+			path = CCGLTouchSplitView;
+			sourceTree = "<group>";
+		};
+		E0BFF2921426B62D00A1441B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0BFF2931426B62D00A1441B /* CCGLTouchSplitView-Info.plist */,
+				E0BFF2941426B62D00A1441B /* InfoPlist.strings */,
+				E0BFF2991426B62D00A1441B /* CCGLTouchSplitView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = CCGLTouchSplitView;
+			sourceTree = "<group>";
+		};
+		E0BFF2AE1426B64100A1441B /* MyAssets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MyAssets;
+			sourceTree = "<group>";
+		};
+		E0BFF2BF1426B6D100A1441B /* CCGLTouchCore */ = {
+			isa = PBXGroup;
+			children = (
+				E0BFF2C01426B6D100A1441B /* CCGLTouchAppDelegate.h */,
+				E0BFF2C11426B6D100A1441B /* CCGLTouchAppDelegate.mm */,
+				E0BFF2C21426B6D100A1441B /* CCGLTouchView.h */,
+				E0BFF2C31426B6D100A1441B /* CCGLTouchView.mm */,
+				E0BFF2C41426B6D100A1441B /* CCGLTouchViewController.h */,
+				E0BFF2C51426B6D100A1441B /* CCGLTouchViewController.mm */,
+				E0BFF2C61426B6D100A1441B /* main.mm */,
+			);
+			path = CCGLTouchCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0BFF2861426B62D00A1441B /* CCGLTouchSplitView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0BFF2AB1426B62D00A1441B /* Build configuration list for PBXNativeTarget "CCGLTouchSplitView" */;
+			buildPhases = (
+				E0BFF2831426B62D00A1441B /* Sources */,
+				E0BFF2841426B62D00A1441B /* Frameworks */,
+				E0BFF2851426B62D00A1441B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCGLTouchSplitView;
+			productName = CCGLTouchSplitView;
+			productReference = E0BFF2871426B62D00A1441B /* CCGLTouchSplitView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0BFF27E1426B62D00A1441B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E0BFF2811426B62D00A1441B /* Build configuration list for PBXProject "CCGLTouchSplitView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E0BFF27C1426B62D00A1441B;
+			productRefGroup = E0BFF2881426B62D00A1441B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0BFF2861426B62D00A1441B /* CCGLTouchSplitView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0BFF2851426B62D00A1441B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0BFF2961426B62D00A1441B /* InfoPlist.strings in Resources */,
+				E0BFF29F1426B62D00A1441B /* MainWindow.xib in Resources */,
+				E0BFF2A51426B62D00A1441B /* DetailView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0BFF2831426B62D00A1441B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0BFF29C1426B62D00A1441B /* MyAppDelegate.mm in Sources */,
+				E0BFF2A81426B62D00A1441B /* MyRootViewController.mm in Sources */,
+				E0BFF2C71426B6D100A1441B /* CCGLTouchAppDelegate.mm in Sources */,
+				E0BFF2C81426B6D100A1441B /* CCGLTouchView.mm in Sources */,
+				E0BFF2C91426B6D100A1441B /* CCGLTouchViewController.mm in Sources */,
+				E0BFF2CA1426B6D100A1441B /* main.mm in Sources */,
+				E0BFF2D01426B75600A1441B /* MyDetailViewController.mm in Sources */,
+				E0BFF2D21426B75600A1441B /* MyCinderGLView.mm in Sources */,
+				E0411D5A142D5CF000A93374 /* MyTableViewCell.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E0BFF2941426B62D00A1441B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0BFF2951426B62D00A1441B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E0BFF29D1426B62D00A1441B /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0BFF29E1426B62D00A1441B /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		E0BFF2A31426B62D00A1441B /* DetailView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0BFF2A41426B62D00A1441B /* en */,
+			);
+			name = DetailView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0BFF2A91426B62D00A1441B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		E0BFF2AA1426B62D00A1441B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0BFF2AC1426B62D00A1441B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CINDER_PATH = ../..;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCGLTouchSplitView/CCGLTouchSplitView-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				INFOPLIST_FILE = "CCGLTouchSplitView/CCGLTouchSplitView-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../lib\"",
+				);
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"";
+				PREBINDING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" include";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E0BFF2AD1426B62D00A1441B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CINDER_PATH = ../..;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCGLTouchSplitView/CCGLTouchSplitView-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				INFOPLIST_FILE = "CCGLTouchSplitView/CCGLTouchSplitView-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../lib\"",
+				);
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone.a\"";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"";
+				PREBINDING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" include";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0BFF2811426B62D00A1441B /* Build configuration list for PBXProject "CCGLTouchSplitView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0BFF2A91426B62D00A1441B /* Debug */,
+				E0BFF2AA1426B62D00A1441B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0BFF2AB1426B62D00A1441B /* Build configuration list for PBXNativeTarget "CCGLTouchSplitView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0BFF2AC1426B62D00A1441B /* Debug */,
+				E0BFF2AD1426B62D00A1441B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0BFF27E1426B62D00A1441B /* Project object */;
+}

@@ -1,0 +1,37 @@
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+LICENSE
+
+////////////////
+
+  The CCGLTouch wrapper was created and is distributed freely by Matthieu Savary.
+  Copyright (c) 2011 SMALLAB.ORG. All rights reserved.
+
+  The CCGLTouch wrapper is released under the GNU Lesser General Public License.
+  See lgpl.txt included in this package or available here: http://www.gnu.org/licenses/lgpl.txt
+
+  More info on the CCGL project >> http://www.smallab.org/code/ccgl-touch/
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+DISCLAIMER
+
+////////////////
+
+  Please be aware that by including the CCGLTouch wrapper in your projects, you agree to use it at your own risk!
+  I, Matthieu Savary, am not responsible for any damage that may be caused to your computer, OS, business,
+  or yourself from any proper or improper use of the wrapper.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+  ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+  TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
