@@ -8,6 +8,8 @@
 //  More info on the CCGLTouch project >> http://www.smallab.org/code/ccgl-touch/
 //  License & disclaimer >> see license.txt file included in the distribution package
 //
+//  Latest revision on 10/06/12.
+//
 
 #import "MyAppDelegate.h"
 
@@ -17,14 +19,14 @@
 - (void)launch
 {    
 	// OpenGL View
-	MyCinderGLView *aView = [[MyCinderGLView alloc] init];
-	glView = aView;
+	MyCCGLView *aView = [[MyCCGLView alloc] init];
+	ccglView = aView;
 	[aView release];
-	glView = [[MyCinderGLView alloc] initWithFrame:CGRectMake(0.0, 44.0, (float)[UIScreen mainScreen].bounds.size.width, (float)[UIScreen mainScreen].bounds.size.height-44.0)];//[UIScreen mainScreen].bounds];
-	[[detailViewController view] addSubview:glView];
+	ccglView = [[MyCCGLView alloc] initWithFrame:CGRectMake(0.0, 44.0, (float)[UIScreen mainScreen].bounds.size.width, (float)[UIScreen mainScreen].bounds.size.height-44.0)];//[UIScreen mainScreen].bounds];
+	[[detailViewController view] addSubview:ccglView];
 	
     // set Detail View Controller's prop
-    [detailViewController setGLView:glView];
+    [detailViewController setCCGLView:ccglView];
     
     
     // use splitViewController as the root view controller
@@ -35,7 +37,7 @@
 {
     [detailViewController release];
     [rootViewController release];
-    [glView release];
+    [ccglView release];
     [splitViewController release];
     [super dealloc];
 }

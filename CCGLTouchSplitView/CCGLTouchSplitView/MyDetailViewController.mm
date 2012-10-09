@@ -8,6 +8,8 @@
 //  More info on the CCGLTouch project >> http://www.smallab.org/code/ccgl-touch/
 //  License & disclaimer >> see license.txt file included in the distribution package
 //
+//  Latest revision on 10/06/12.
+//
 
 #import "MyDetailViewController.h"
 
@@ -82,17 +84,17 @@
 - (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toIfaceOrient duration:(NSTimeInterval)duration
 {
     if (toIfaceOrient == 3 || toIfaceOrient == 4) {
-        CGRect frame = glView.frame;
+        CGRect frame = ccglView.frame;
         frame.size.width = 703;
         frame.size.height = 704;
-        glView.frame = frame;
-        [glView setCam];
+        ccglView.frame = frame;
+        [ccglView setCam];
     } else {
-        CGRect frame = glView.frame;
+        CGRect frame = ccglView.frame;
         frame.size.width = 768;
         frame.size.height = 980;
-        glView.frame = frame;
-        [glView setCam];
+        ccglView.frame = frame;
+        [ccglView setCam];
     }
 }
 
@@ -140,12 +142,12 @@
 
 
 /**
- *	setting glView(s) from the Delegate
+ *	setting ccglView(s) from the Delegate
  */
 
-- (void)setGLView:(MyCinderGLView *)view
+- (void)setCCGLView:(MyCCGLView *)view
 {
-    glView = view;
+    ccglView = view;
 }
 
 
@@ -156,7 +158,7 @@
 
 - (void)switchShape:(int)num
 {
-    [glView setShapeNum:num];
+    [ccglView setShapeNum:num];
 }
 
 
@@ -170,7 +172,7 @@
     [_myPopoverController release];
     [_toolbar release];
     [_detailItem release];
-    [glView release];
+    [ccglView release];
     [super dealloc];
 }
 

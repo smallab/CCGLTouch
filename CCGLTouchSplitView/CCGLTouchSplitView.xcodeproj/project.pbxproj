@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0407A6116226318000E6CF8 /* icon_ipad_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E0407A6016226317000E6CF8 /* icon_ipad_retina.png */; };
+		E0407A641622631B000E6CF8 /* icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E0407A631622631B000E6CF8 /* icon_ipad.png */; };
 		E0411D5A142D5CF000A93374 /* MyTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0411D58142D5CF000A93374 /* MyTableViewCell.mm */; };
+		E048A5B516222841009EDFEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E048A5B416222841009EDFEC /* main.m */; };
 		E0BFF28C1426B62D00A1441B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28B1426B62D00A1441B /* UIKit.framework */; };
 		E0BFF28E1426B62D00A1441B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28D1426B62D00A1441B /* Foundation.framework */; };
 		E0BFF2901426B62D00A1441B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28F1426B62D00A1441B /* CoreGraphics.framework */; };
@@ -19,9 +22,8 @@
 		E0BFF2C71426B6D100A1441B /* CCGLTouchAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C11426B6D100A1441B /* CCGLTouchAppDelegate.mm */; };
 		E0BFF2C81426B6D100A1441B /* CCGLTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C31426B6D100A1441B /* CCGLTouchView.mm */; };
 		E0BFF2C91426B6D100A1441B /* CCGLTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C51426B6D100A1441B /* CCGLTouchViewController.mm */; };
-		E0BFF2CA1426B6D100A1441B /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C61426B6D100A1441B /* main.mm */; };
 		E0BFF2D01426B75600A1441B /* MyDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2CC1426B75600A1441B /* MyDetailViewController.mm */; };
-		E0BFF2D21426B75600A1441B /* MyCinderGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2CF1426B75600A1441B /* MyCinderGLView.mm */; };
+		E0BFF2D21426B75600A1441B /* MyCCGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2CF1426B75600A1441B /* MyCCGLView.mm */; };
 		E0BFF2E31426B79C00A1441B /* libcinder-iphone_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D31426B79C00A1441B /* libcinder-iphone_d.a */; };
 		E0BFF2E41426B79C00A1441B /* libcinder-iphone-sim_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D41426B79C00A1441B /* libcinder-iphone-sim_d.a */; };
 		E0BFF2E51426B79C00A1441B /* libcinder-iphone-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D51426B79C00A1441B /* libcinder-iphone-sim.a */; };
@@ -41,8 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0407A6016226317000E6CF8 /* icon_ipad_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad_retina.png; sourceTree = "<group>"; };
+		E0407A631622631B000E6CF8 /* icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad.png; sourceTree = "<group>"; };
 		E0411D57142D5CF000A93374 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		E0411D58142D5CF000A93374 /* MyTableViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyTableViewCell.mm; sourceTree = "<group>"; };
+		E048A5B416222841009EDFEC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E0BFF2871426B62D00A1441B /* CCGLTouchSplitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCGLTouchSplitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0BFF28B1426B62D00A1441B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E0BFF28D1426B62D00A1441B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,11 +67,10 @@
 		E0BFF2C31426B6D100A1441B /* CCGLTouchView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCGLTouchView.mm; sourceTree = "<group>"; };
 		E0BFF2C41426B6D100A1441B /* CCGLTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGLTouchViewController.h; sourceTree = "<group>"; };
 		E0BFF2C51426B6D100A1441B /* CCGLTouchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCGLTouchViewController.mm; sourceTree = "<group>"; };
-		E0BFF2C61426B6D100A1441B /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		E0BFF2CB1426B75600A1441B /* MyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDetailViewController.h; sourceTree = "<group>"; };
 		E0BFF2CC1426B75600A1441B /* MyDetailViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyDetailViewController.mm; sourceTree = "<group>"; };
-		E0BFF2CE1426B75600A1441B /* MyCinderGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCinderGLView.h; sourceTree = "<group>"; };
-		E0BFF2CF1426B75600A1441B /* MyCinderGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyCinderGLView.mm; sourceTree = "<group>"; };
+		E0BFF2CE1426B75600A1441B /* MyCCGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCCGLView.h; sourceTree = "<group>"; };
+		E0BFF2CF1426B75600A1441B /* MyCCGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyCCGLView.mm; sourceTree = "<group>"; };
 		E0BFF2D31426B79C00A1441B /* libcinder-iphone_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone_d.a"; path = "../../lib/libcinder-iphone_d.a"; sourceTree = "<group>"; };
 		E0BFF2D41426B79C00A1441B /* libcinder-iphone-sim_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim_d.a"; path = "../../lib/libcinder-iphone-sim_d.a"; sourceTree = "<group>"; };
 		E0BFF2D51426B79C00A1441B /* libcinder-iphone-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim.a"; path = "../../lib/libcinder-iphone-sim.a"; sourceTree = "<group>"; };
@@ -118,9 +122,11 @@
 		E0BFF27C1426B62D00A1441B = {
 			isa = PBXGroup;
 			children = (
-				E0BFF2AE1426B64100A1441B /* MyAssets */,
-				E0BFF2911426B62D00A1441B /* MyClasses */,
+				E0407A631622631B000E6CF8 /* icon_ipad.png */,
+				E0407A6016226317000E6CF8 /* icon_ipad_retina.png */,
 				E0BFF2BF1426B6D100A1441B /* CCGLTouchCore */,
+				E0BFF2911426B62D00A1441B /* MyClasses */,
+				E0BFF2AE1426B64100A1441B /* MyAssets */,
 				E0BFF2921426B62D00A1441B /* Supporting Files */,
 				E0BFF28A1426B62D00A1441B /* Frameworks */,
 				E0BFF2881426B62D00A1441B /* Products */,
@@ -166,12 +172,10 @@
 			children = (
 				E0BFF29A1426B62D00A1441B /* MyAppDelegate.h */,
 				E0BFF29B1426B62D00A1441B /* MyAppDelegate.mm */,
-				E0BFF29D1426B62D00A1441B /* MainWindow.xib */,
-				E0BFF2A31426B62D00A1441B /* DetailView.xib */,
 				E0BFF2CB1426B75600A1441B /* MyDetailViewController.h */,
 				E0BFF2CC1426B75600A1441B /* MyDetailViewController.mm */,
-				E0BFF2CE1426B75600A1441B /* MyCinderGLView.h */,
-				E0BFF2CF1426B75600A1441B /* MyCinderGLView.mm */,
+				E0BFF2CE1426B75600A1441B /* MyCCGLView.h */,
+				E0BFF2CF1426B75600A1441B /* MyCCGLView.mm */,
 				E0BFF2A61426B62D00A1441B /* MyRootViewController.h */,
 				E0BFF2A71426B62D00A1441B /* MyRootViewController.mm */,
 				E0411D57142D5CF000A93374 /* MyTableViewCell.h */,
@@ -184,8 +188,9 @@
 		E0BFF2921426B62D00A1441B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E0BFF2931426B62D00A1441B /* CCGLTouchSplitView-Info.plist */,
+				E048A5B416222841009EDFEC /* main.m */,
 				E0BFF2941426B62D00A1441B /* InfoPlist.strings */,
+				E0BFF2931426B62D00A1441B /* CCGLTouchSplitView-Info.plist */,
 				E0BFF2991426B62D00A1441B /* CCGLTouchSplitView-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -195,6 +200,8 @@
 		E0BFF2AE1426B64100A1441B /* MyAssets */ = {
 			isa = PBXGroup;
 			children = (
+				E0BFF29D1426B62D00A1441B /* MainWindow.xib */,
+				E0BFF2A31426B62D00A1441B /* DetailView.xib */,
 			);
 			name = MyAssets;
 			sourceTree = "<group>";
@@ -208,7 +215,6 @@
 				E0BFF2C31426B6D100A1441B /* CCGLTouchView.mm */,
 				E0BFF2C41426B6D100A1441B /* CCGLTouchViewController.h */,
 				E0BFF2C51426B6D100A1441B /* CCGLTouchViewController.mm */,
-				E0BFF2C61426B6D100A1441B /* main.mm */,
 			);
 			path = CCGLTouchCore;
 			sourceTree = "<group>";
@@ -263,6 +269,8 @@
 				E0BFF2961426B62D00A1441B /* InfoPlist.strings in Resources */,
 				E0BFF29F1426B62D00A1441B /* MainWindow.xib in Resources */,
 				E0BFF2A51426B62D00A1441B /* DetailView.xib in Resources */,
+				E0407A6116226318000E6CF8 /* icon_ipad_retina.png in Resources */,
+				E0407A641622631B000E6CF8 /* icon_ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,10 +286,10 @@
 				E0BFF2C71426B6D100A1441B /* CCGLTouchAppDelegate.mm in Sources */,
 				E0BFF2C81426B6D100A1441B /* CCGLTouchView.mm in Sources */,
 				E0BFF2C91426B6D100A1441B /* CCGLTouchViewController.mm in Sources */,
-				E0BFF2CA1426B6D100A1441B /* main.mm in Sources */,
 				E0BFF2D01426B75600A1441B /* MyDetailViewController.mm in Sources */,
-				E0BFF2D21426B75600A1441B /* MyCinderGLView.mm in Sources */,
+				E0BFF2D21426B75600A1441B /* MyCCGLView.mm in Sources */,
 				E0411D5A142D5CF000A93374 /* MyTableViewCell.mm in Sources */,
+				E048A5B516222841009EDFEC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +310,7 @@
 				E0BFF29E1426B62D00A1441B /* en */,
 			);
 			name = MainWindow.xib;
+			path = CCGLTouchSplitView;
 			sourceTree = "<group>";
 		};
 		E0BFF2A31426B62D00A1441B /* DetailView.xib */ = {
@@ -310,6 +319,7 @@
 				E0BFF2A41426B62D00A1441B /* en */,
 			);
 			name = DetailView.xib;
+			path = CCGLTouchSplitView;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -373,6 +383,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../lib\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"";
 				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"";
@@ -399,6 +410,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../lib\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone.a\"";
 				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"";

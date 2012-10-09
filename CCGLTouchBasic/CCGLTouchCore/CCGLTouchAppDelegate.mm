@@ -156,16 +156,8 @@
 - (void)privateAccelerated:(Vec3f)direction
 {
     float mAccelFilterFactor = 0.1f;
-    
 	Vec3f filtered = mLastAccel * (1.0f - mAccelFilterFactor) + direction * mAccelFilterFactor;
-    
 	AccelEvent event( filtered, direction, mLastAccel, mLastRawAccel );
-	
-	/*bool handled = false;
-	for( CallbackMgr<bool (AccelEvent)>::iterator cbIter = mCallbacksAccelerated.begin(); ( cbIter != mCallbacksAccelerated.end() ) && ( ! handled ); ++cbIter )
-		handled = (cbIter->second)( event );		
-	if( ! handled )	
-		accelerated( event );*/
     [self accelerated:event];
     
 	mLastAccel = filtered;

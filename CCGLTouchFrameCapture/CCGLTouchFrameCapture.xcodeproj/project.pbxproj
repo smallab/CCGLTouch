@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E008F32716223A6900361EC5 /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E008F32616223A6900361EC5 /* icon_retina.png */; };
+		E008F32916223A6C00361EC5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E008F32816223A6C00361EC5 /* icon.png */; };
+		E04C0A851580E21500B91B58 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04C0A841580E21500B91B58 /* AssetsLibrary.framework */; };
+		E05BE43E157F832C00740148 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE43D157F832C00740148 /* UIKit.framework */; };
+		E05BE440157F832C00740148 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE43F157F832C00740148 /* Foundation.framework */; };
+		E05BE442157F832C00740148 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE441157F832C00740148 /* CoreGraphics.framework */; };
+		E05BE444157F832C00740148 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE443157F832C00740148 /* QuartzCore.framework */; };
+		E05BE446157F832C00740148 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE445157F832C00740148 /* OpenGLES.framework */; };
+		E05BE448157F832C00740148 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE447157F832C00740148 /* AudioToolbox.framework */; };
+		E05BE44A157F832C00740148 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE449157F832C00740148 /* CoreVideo.framework */; };
+		E05BE44C157F832C00740148 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE44B157F832C00740148 /* AVFoundation.framework */; };
+		E05BE44E157F832C00740148 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE44D157F832C00740148 /* CoreMedia.framework */; };
+		E05BE450157F832C00740148 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE44F157F832C00740148 /* CoreText.framework */; };
+		E05BE456157F832C00740148 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E05BE454157F832C00740148 /* InfoPlist.strings */; };
+		E05BE458157F832C00740148 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E05BE457157F832C00740148 /* main.m */; };
+		E05BE45D157F832C00740148 /* CCGLTouchAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05BE45C157F832C00740148 /* CCGLTouchAppDelegate.mm */; };
+		E05BE460157F832C00740148 /* CCGLTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05BE45F157F832C00740148 /* CCGLTouchView.mm */; };
+		E05BE463157F832C00740148 /* CCGLTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05BE462157F832C00740148 /* CCGLTouchViewController.mm */; };
+		E05BE467157F832C00740148 /* MyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05BE466157F832C00740148 /* MyAppDelegate.mm */; };
+		E05BE46A157F832C00740148 /* MyCCGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05BE469157F832C00740148 /* MyCCGLView.mm */; };
+		E05BE46D157F832C00740148 /* MyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05BE46C157F832C00740148 /* MyViewController.mm */; };
+		E05BE470157F832C00740148 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05BE46F157F832C00740148 /* MainWindow.xib */; };
+		E05BE472157F832C00740148 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05BE471157F832C00740148 /* MyViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E008F32616223A6900361EC5 /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = "<group>"; };
+		E008F32816223A6C00361EC5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E04C0A841580E21500B91B58 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		E05BE439157F832C00740148 /* CCGLTouchFrameCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCGLTouchFrameCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E05BE43D157F832C00740148 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E05BE43F157F832C00740148 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E05BE441157F832C00740148 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E05BE443157F832C00740148 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E05BE445157F832C00740148 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E05BE447157F832C00740148 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E05BE449157F832C00740148 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E05BE44B157F832C00740148 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E05BE44D157F832C00740148 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E05BE44F157F832C00740148 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		E05BE453157F832C00740148 /* CCGLTouchFrameCapture-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCGLTouchFrameCapture-Info.plist"; sourceTree = "<group>"; };
+		E05BE455157F832C00740148 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E05BE457157F832C00740148 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E05BE459157F832C00740148 /* CCGLTouchFrameCapture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCGLTouchFrameCapture-Prefix.pch"; sourceTree = "<group>"; };
+		E05BE45B157F832C00740148 /* CCGLTouchAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCGLTouchAppDelegate.h; path = ../CCGLTouchCore/CCGLTouchAppDelegate.h; sourceTree = "<group>"; };
+		E05BE45C157F832C00740148 /* CCGLTouchAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = CCGLTouchAppDelegate.mm; path = ../CCGLTouchCore/CCGLTouchAppDelegate.mm; sourceTree = "<group>"; };
+		E05BE45E157F832C00740148 /* CCGLTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCGLTouchView.h; path = ../CCGLTouchCore/CCGLTouchView.h; sourceTree = "<group>"; };
+		E05BE45F157F832C00740148 /* CCGLTouchView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = CCGLTouchView.mm; path = ../CCGLTouchCore/CCGLTouchView.mm; sourceTree = "<group>"; };
+		E05BE461157F832C00740148 /* CCGLTouchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCGLTouchViewController.h; path = ../CCGLTouchCore/CCGLTouchViewController.h; sourceTree = "<group>"; };
+		E05BE462157F832C00740148 /* CCGLTouchViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = CCGLTouchViewController.mm; path = ../CCGLTouchCore/CCGLTouchViewController.mm; sourceTree = "<group>"; };
+		E05BE465157F832C00740148 /* MyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAppDelegate.h; sourceTree = "<group>"; };
+		E05BE466157F832C00740148 /* MyAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyAppDelegate.mm; sourceTree = "<group>"; };
+		E05BE468157F832C00740148 /* MyCCGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCCGLView.h; sourceTree = "<group>"; };
+		E05BE469157F832C00740148 /* MyCCGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyCCGLView.mm; sourceTree = "<group>"; };
+		E05BE46B157F832C00740148 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		E05BE46C157F832C00740148 /* MyViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyViewController.mm; sourceTree = "<group>"; };
+		E05BE46F157F832C00740148 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		E05BE471157F832C00740148 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E05BE436157F832C00740148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E05BE43E157F832C00740148 /* UIKit.framework in Frameworks */,
+				E05BE440157F832C00740148 /* Foundation.framework in Frameworks */,
+				E05BE442157F832C00740148 /* CoreGraphics.framework in Frameworks */,
+				E05BE444157F832C00740148 /* QuartzCore.framework in Frameworks */,
+				E05BE446157F832C00740148 /* OpenGLES.framework in Frameworks */,
+				E05BE448157F832C00740148 /* AudioToolbox.framework in Frameworks */,
+				E05BE44A157F832C00740148 /* CoreVideo.framework in Frameworks */,
+				E05BE44C157F832C00740148 /* AVFoundation.framework in Frameworks */,
+				E05BE44E157F832C00740148 /* CoreMedia.framework in Frameworks */,
+				E05BE450157F832C00740148 /* CoreText.framework in Frameworks */,
+				E04C0A851580E21500B91B58 /* AssetsLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E05BE42E157F832C00740148 = {
+			isa = PBXGroup;
+			children = (
+				E008F32816223A6C00361EC5 /* icon.png */,
+				E008F32616223A6900361EC5 /* icon_retina.png */,
+				E05BE451157F832C00740148 /* CCGLTouchFrameCapture */,
+				E05BE43C157F832C00740148 /* Frameworks */,
+				E05BE43A157F832C00740148 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E05BE43A157F832C00740148 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E05BE439157F832C00740148 /* CCGLTouchFrameCapture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E05BE43C157F832C00740148 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E04C0A841580E21500B91B58 /* AssetsLibrary.framework */,
+				E05BE43D157F832C00740148 /* UIKit.framework */,
+				E05BE43F157F832C00740148 /* Foundation.framework */,
+				E05BE441157F832C00740148 /* CoreGraphics.framework */,
+				E05BE443157F832C00740148 /* QuartzCore.framework */,
+				E05BE445157F832C00740148 /* OpenGLES.framework */,
+				E05BE447157F832C00740148 /* AudioToolbox.framework */,
+				E05BE449157F832C00740148 /* CoreVideo.framework */,
+				E05BE44B157F832C00740148 /* AVFoundation.framework */,
+				E05BE44D157F832C00740148 /* CoreMedia.framework */,
+				E05BE44F157F832C00740148 /* CoreText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E05BE451157F832C00740148 /* CCGLTouchFrameCapture */ = {
+			isa = PBXGroup;
+			children = (
+				E05BE45A157F832C00740148 /* CCGLTouchCore */,
+				E05BE464157F832C00740148 /* MyClasses */,
+				E05BE46E157F832C00740148 /* MyAssets */,
+				E05BE452157F832C00740148 /* Supporting Files */,
+			);
+			path = CCGLTouchFrameCapture;
+			sourceTree = "<group>";
+		};
+		E05BE452157F832C00740148 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E05BE453157F832C00740148 /* CCGLTouchFrameCapture-Info.plist */,
+				E05BE454157F832C00740148 /* InfoPlist.strings */,
+				E05BE457157F832C00740148 /* main.m */,
+				E05BE459157F832C00740148 /* CCGLTouchFrameCapture-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E05BE45A157F832C00740148 /* CCGLTouchCore */ = {
+			isa = PBXGroup;
+			children = (
+				E05BE45B157F832C00740148 /* CCGLTouchAppDelegate.h */,
+				E05BE45C157F832C00740148 /* CCGLTouchAppDelegate.mm */,
+				E05BE45E157F832C00740148 /* CCGLTouchView.h */,
+				E05BE45F157F832C00740148 /* CCGLTouchView.mm */,
+				E05BE461157F832C00740148 /* CCGLTouchViewController.h */,
+				E05BE462157F832C00740148 /* CCGLTouchViewController.mm */,
+			);
+			name = CCGLTouchCore;
+			sourceTree = "<group>";
+		};
+		E05BE464157F832C00740148 /* MyClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E05BE465157F832C00740148 /* MyAppDelegate.h */,
+				E05BE466157F832C00740148 /* MyAppDelegate.mm */,
+				E05BE46B157F832C00740148 /* MyViewController.h */,
+				E05BE46C157F832C00740148 /* MyViewController.mm */,
+				E05BE468157F832C00740148 /* MyCCGLView.h */,
+				E05BE469157F832C00740148 /* MyCCGLView.mm */,
+			);
+			name = MyClasses;
+			sourceTree = "<group>";
+		};
+		E05BE46E157F832C00740148 /* MyAssets */ = {
+			isa = PBXGroup;
+			children = (
+				E05BE46F157F832C00740148 /* MainWindow.xib */,
+				E05BE471157F832C00740148 /* MyViewController.xib */,
+			);
+			name = MyAssets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E05BE438157F832C00740148 /* CCGLTouchFrameCapture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E05BE475157F832C00740148 /* Build configuration list for PBXNativeTarget "CCGLTouchFrameCapture" */;
+			buildPhases = (
+				E05BE435157F832C00740148 /* Sources */,
+				E05BE436157F832C00740148 /* Frameworks */,
+				E05BE437157F832C00740148 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCGLTouchFrameCapture;
+			productName = CCGLTouchFrameCapture;
+			productReference = E05BE439157F832C00740148 /* CCGLTouchFrameCapture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E05BE430157F832C00740148 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "USER STUDIO";
+			};
+			buildConfigurationList = E05BE433157F832C00740148 /* Build configuration list for PBXProject "CCGLTouchFrameCapture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E05BE42E157F832C00740148;
+			productRefGroup = E05BE43A157F832C00740148 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E05BE438157F832C00740148 /* CCGLTouchFrameCapture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E05BE437157F832C00740148 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E05BE456157F832C00740148 /* InfoPlist.strings in Resources */,
+				E05BE470157F832C00740148 /* MainWindow.xib in Resources */,
+				E05BE472157F832C00740148 /* MyViewController.xib in Resources */,
+				E008F32716223A6900361EC5 /* icon_retina.png in Resources */,
+				E008F32916223A6C00361EC5 /* icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E05BE435157F832C00740148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E05BE458157F832C00740148 /* main.m in Sources */,
+				E05BE45D157F832C00740148 /* CCGLTouchAppDelegate.mm in Sources */,
+				E05BE460157F832C00740148 /* CCGLTouchView.mm in Sources */,
+				E05BE463157F832C00740148 /* CCGLTouchViewController.mm in Sources */,
+				E05BE467157F832C00740148 /* MyAppDelegate.mm in Sources */,
+				E05BE46A157F832C00740148 /* MyCCGLView.mm in Sources */,
+				E05BE46D157F832C00740148 /* MyViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E05BE454157F832C00740148 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E05BE455157F832C00740148 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E05BE473157F832C00740148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		E05BE474157F832C00740148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E05BE476157F832C00740148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CINDER_PATH = ../..;
+				DEVICE_FAMILY = iPhone/iPad;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCGLTouchFrameCapture/CCGLTouchFrameCapture-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(CINDER_PATH)/include",
+					"$(CINDER_PATH)/boost",
+				);
+				INFOPLIST_FILE = "CCGLTouchFrameCapture/CCGLTouchFrameCapture-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(CINDER_PATH)/lib",
+					"$(CINDER_PATH)/lib/ios",
+					"$(CINDER_PATH)/lib/ios-sim",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					/usr/lib/libz.dylib,
+					"$(CINDER_PATH)/lib/libcinder-iphone_d.a",
+					"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(CINDER_PATH)/include";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E05BE477157F832C00740148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CINDER_PATH = ../..;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVICE_FAMILY = iPhone/iPad;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCGLTouchFrameCapture/CCGLTouchFrameCapture-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(CINDER_PATH)/include",
+					"$(CINDER_PATH)/boost",
+				);
+				INFOPLIST_FILE = "CCGLTouchFrameCapture/CCGLTouchFrameCapture-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(CINDER_PATH)/lib",
+					"$(CINDER_PATH)/lib/ios",
+					"$(CINDER_PATH)/lib/ios-sim",
+				);
+				OTHER_LDFLAGS = (
+					/usr/lib/libz.dylib,
+					"$(CINDER_PATH)/lib/libcinder-iphone.a",
+					"$(CINDER_PATH)/lib/libcinder-iphone-sim.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(CINDER_PATH)/include";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E05BE433157F832C00740148 /* Build configuration list for PBXProject "CCGLTouchFrameCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E05BE473157F832C00740148 /* Debug */,
+				E05BE474157F832C00740148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E05BE475157F832C00740148 /* Build configuration list for PBXNativeTarget "CCGLTouchFrameCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E05BE476157F832C00740148 /* Debug */,
+				E05BE477157F832C00740148 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E05BE430157F832C00740148 /* Project object */;
+}

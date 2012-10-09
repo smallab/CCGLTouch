@@ -8,21 +8,21 @@
 //  More info on the CCGLTouch project >> http://www.smallab.org/code/ccgl-touch/
 //  License & disclaimer >> see license.txt file included in the distribution package
 //
-//  
+//
 //  The Cinder source code is used under the following terms:
 //
 //
 //  Copyright (c) 2010, The Barbarian Group
 //  All rights reserved.
-//  
+//
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that
 //  the following conditions are met:
-//  
+//
 //  * Redistributions of source code must retain the above copyright notice, this list of conditions and
 //  the following disclaimer.
 //  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and
 //  the following disclaimer in the documentation and/or other materials provided with the distribution.
-//  
+//
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
 //  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
 //  PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
@@ -31,7 +31,7 @@
 //  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 //  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
-//  
+//
 
 #import "CCGLTouchView.h"
 
@@ -41,26 +41,32 @@
 @interface CCGLTouchView ()
 @property (nonatomic, retain) EAGLContext *context;
 - (void)allocateGraphics;
-- (void)makeCurrentContext;
-- (void)flushBuffer;
 @end
 
 
 @implementation CCGLTouchView
 
 @synthesize context;
+@synthesize delegate = _delegate;
 
 // You must implement this method (for Apple's EAGL implementation)
 + (Class)layerClass {
     return [CAEAGLLayer class];
 }
 
+
+
 /**
- *	initWithFrame
+ *	initWithFrame, Bounds, Context, Sharegroup, layoutSubviews, Anti-aliasing
  */
 
 //The GL view is stored in the nib file. When it's unarchived it's sent -initWithCoder:
 - (id)initWithFrame:(CGRect)frame
+{
+    return [self initWithFrame:frame andSharegroup:[[EAGLSharegroup alloc] init]];
+}
+
+- (id)initWithFrame:(CGRect)frame andSharegroup:(EAGLSharegroup *)_sharegroup
 {
 	if ( (self = [super initWithFrame:frame]) ) {
         // Animation
@@ -72,13 +78,17 @@
         
         // Bounds of the current screen
 		[self setCurrentBounds:frame];
-
-        // setup flag
+        
+        // Init flags
 		appSetupCalled = NO;
+        antiAliasingEnabled = NO;
+        multipleTouchEnabled = NO;
+        ccglCaptureFlag = NO;
         
-        // other inits
-        self.multipleTouchEnabled = NO;
+        // OpenGL threading option
+        sharegroup = _sharegroup;
         
+        // View scaling between devices
 		if( [[UIScreen mainScreen] respondsToSelector:@selector(scale:)] &&
            [self respondsToSelector:@selector(setContentScaleFactor:)] )
 			[self setContentScaleFactor:[[UIScreen mainScreen] scale]];
@@ -86,6 +96,7 @@
         // Get the layer
         CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
         
+        // Set its properties
         eaglLayer.opaque = YES;
         eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
                                         [NSNumber numberWithBool:NO], kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat, nil];
@@ -100,7 +111,7 @@
         }
 	}
     
-	return self;	
+	return self;
 }
 
 - (void)setCurrentBounds:(CGRect)frame
@@ -114,14 +125,37 @@
 - (void) allocateGraphics
 {
     // Create EAGL context
-	context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
+    if (sharegroup)
+        context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1 sharegroup:sharegroup];
+    else {
+        context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
+        sharegroup = context.sharegroup;
+    }
 	if (!context || ![EAGLContext setCurrentContext:context]) {
 		[self release];
 		return;
 	}
 }
 
-- (void) layoutSubviews
+- (EAGLSharegroup *)getThisSharegroup
+{
+    return sharegroup;
+}
+
+- (EAGLContext *)getThisContext
+{
+    return context;
+}
+
+- (void)layoutSubviews
+{
+    if ([self isAntiAliasingEnabled])
+        [self layoutSubviewsWithMSAA];
+    else
+        [self layoutSubviewsWithoutMSAA];
+}
+
+- (void)layoutSubviewsWithoutMSAA
 {
     // make sure setting the context is done
     [EAGLContext setCurrentContext:context];
@@ -156,8 +190,8 @@
     glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
     
 	glBindRenderbufferOES(GL_RENDERBUFFER_OES, depthRenderbuffer);
-    glRenderbufferStorageOES(GL_RENDERBUFFER_OES, 
-                             GL_DEPTH_COMPONENT16_OES, 
+    glRenderbufferStorageOES(GL_RENDERBUFFER_OES,
+                             GL_DEPTH_COMPONENT16_OES,
                              backingWidth, backingHeight);
 	
     if( glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES) != GL_FRAMEBUFFER_COMPLETE_OES ) {
@@ -165,8 +199,67 @@
     }
 }
 
+- (void)layoutSubviewsWithMSAA
+{
+    // make sure setting the context is done
+    [EAGLContext setCurrentContext:context];
+	
+    // First destroy any existing frame buffer
+    glDeleteFramebuffersOES(1, &defaultFramebuffer);
+    defaultFramebuffer = 0;
+    glDeleteRenderbuffersOES(1, &colorRenderbuffer);
+    colorRenderbuffer = 0;
+    if(depthRenderbuffer) {
+        glDeleteRenderbuffersOES(1, &depthRenderbuffer);
+        depthRenderbuffer = 0;
+    }
+    // in the MSAA range as well
+    glDeleteFramebuffersOES(1, &ccglMsaaDepthBuffer);
+    ccglMsaaDepthBuffer = 0;
+    glDeleteFramebuffersOES(1, &ccglMsaaRenderBuffer);
+    ccglMsaaRenderBuffer = 0;
+    glDeleteFramebuffersOES(1, &ccglMsaaFramebuffer);
+    ccglMsaaFramebuffer = 0;
+    
+	// Create default framebuffer object. The backing will be allocated for the current layer in -resizeFromLayer
+	glGenFramebuffersOES( 1, &defaultFramebuffer );
+	glGenRenderbuffersOES( 1, &colorRenderbuffer );
+	glBindFramebufferOES( GL_FRAMEBUFFER_OES, defaultFramebuffer );
+	glBindRenderbufferOES( GL_RENDERBUFFER_OES, colorRenderbuffer );
+    
+	// Allocate color buffer backing based on the current layer size
+    [context renderbufferStorage:GL_RENDERBUFFER_OES fromDrawable:(CAEAGLLayer*)self.layer];
+	glFramebufferRenderbufferOES( GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, colorRenderbuffer );
+	glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_WIDTH_OES, &backingWidth);
+    glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
+    
+    // Generate our MSAA Frame and Render buffers
+    glGenFramebuffersOES(1, &ccglMsaaFramebuffer);
+    glGenRenderbuffersOES(1, &ccglMsaaRenderBuffer);
+    // Bind our MSAA buffers
+    glBindFramebufferOES(GL_FRAMEBUFFER_OES, ccglMsaaFramebuffer);
+    glBindRenderbufferOES(GL_RENDERBUFFER_OES, ccglMsaaRenderBuffer);
+    // 4 will be the number of pixels that the MSAA buffer will use in order to make one pixel on the render buffer.
+    glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER_OES, 4, GL_RGB5_A1_OES, backingWidth, backingHeight); //GL_RGBA8_OES
+    glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, ccglMsaaRenderBuffer);
+    
+    // To allow depth calculations (typically for 3D drawings)
+    // These 4 lines could be ignored if no calculation for depth is needed (ie. transparent 2D drawings, etc.)
+    glGenRenderbuffersOES(1, &ccglMsaaDepthBuffer);
+    glBindRenderbufferOES(GL_RENDERBUFFER, ccglMsaaDepthBuffer);
+    glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER, 4, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, ccglMsaaDepthBuffer);
+    
+    // Verify it worked
+    if( glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES) != GL_FRAMEBUFFER_COMPLETE_OES ) {
+		NSLog(@"Failed to make complete framebuffer object %x", glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES));
+    }
+}
+
+
+
 /**
- *	The "true" draw loop (similar to drawRect in OSX version)
+ *	This is the "native" draw loop (similar to drawRect in OSX version)
  */
 
 -(void)drawView:(id)sender
@@ -186,7 +279,10 @@
     
 	// This application only creates a single default framebuffer which is already bound at this point.
 	// This call is redundant, but needed if dealing with multiple framebuffers.
-    glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
+    if ([self isAntiAliasingEnabled])
+        glBindFramebufferOES(GL_FRAMEBUFFER_OES, ccglMsaaFramebuffer);
+    else
+        glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
     
 	// Define the viewport.  Changing the settings for the viewport can allow you to scale the viewport
 	// as well as the dimensions etc and so I'm setting it for each frame in case we want to change it
@@ -204,8 +300,48 @@
 
 - (void)flushBuffer
 {
+    // Apple (and the khronos group) encourages you to discard depth
+    // render buffer contents whenever is possible right before
+    // or right after presentation of final image to screen
+    GLenum attachments[] = {GL_DEPTH_ATTACHMENT_OES};
+    glDiscardFramebufferEXT(GL_READ_FRAMEBUFFER_APPLE, 1, attachments);
+    
+    if ([self isAntiAliasingEnabled]) {
+        //Bind both MSAA and View FrameBuffers.
+        glBindFramebufferOES(GL_READ_FRAMEBUFFER_APPLE, ccglMsaaFramebuffer);
+        glBindFramebufferOES(GL_DRAW_FRAMEBUFFER_APPLE, defaultFramebuffer);
+        
+        // Call a resolve to combine both buffers
+        glResolveMultisampleFramebufferAPPLE();
+    }
+    
+    // Capture skecth
+    // This has to happen here, after buffers are combined
+    if (ccglCaptureFlag) {
+        glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
+        ccglCapture = [self glToUIImage];
+        [self sendCaptureToPhotoAlbum];
+        ccglCaptureFlag = NO;
+    }
+    
+    // Present final image to screen
     glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
     [context presentRenderbuffer:GL_RENDERBUFFER_OES];
+}
+
+- (void)enableAntiAliasing
+{
+    antiAliasingEnabled = YES;
+}
+
+- (void)enableAntiAliasing:(BOOL)flag
+{
+    antiAliasingEnabled = flag;
+}
+
+- (BOOL)isAntiAliasingEnabled
+{
+    return antiAliasingEnabled;
 }
 
 - (void)setFrameSize:(CGSize)newSize
@@ -218,12 +354,70 @@
 	cinder::gl::setMatricesWindow( backingWidth, backingHeight );
 }
 
-- (void)dealloc {
-    
+- (void)dealloc
+{
     if ([EAGLContext currentContext] == context)
         [EAGLContext setCurrentContext:nil];
-    [context release];  
+    [context release];
+    context = nil;
+    sharegroup = nil;
+    [ccglCapture release];
+    ccglCapture = nil;
     [super dealloc];
+}
+
+
+
+/**
+ *  OpenGL capture methods
+ */
+
+- (void)captureNextFrame
+{
+    ccglCaptureFlag = YES;
+}
+
+- (void)sendCaptureToPhotoAlbum
+{
+    // save to THE photo album only
+    UIImageWriteToSavedPhotosAlbum(ccglCapture, self, nil, nil);
+}
+
+- (UIImage *)glToUIImage
+{
+    NSInteger myDataLength = [self getWindowWidth] * [self getWindowHeight] * 4;
+    
+    // allocate array and read pixels into it.
+    GLubyte *buffer = (GLubyte *) malloc(myDataLength);
+    glReadPixels(0, 0, [self getWindowWidth], [self getWindowHeight], GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+    
+    // gl renders "upside down" so swap top to bottom into new array.
+    GLubyte *buffer2 = (GLubyte *) malloc(myDataLength);
+    for(int y = 0; y < [self getWindowHeight]; y++)
+    {
+        for(int x = 0; x < [self getWindowWidth] * 4; x++)
+        {
+            buffer2[([self getWindowHeight]-1 - y) * [self getWindowWidth] * 4 + x] = buffer[y * 4 * [self getWindowWidth] + x];
+        }
+    }
+    
+    // make data provider with data.
+    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, buffer2, myDataLength, NULL);
+    
+    // prep the ingredients
+    int bitsPerComponent = 8;
+    int bitsPerPixel = 32;
+    int bytesPerRow = 4 * [self getWindowWidth];
+    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
+    CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
+    
+    // make the cgimage
+    CGImageRef imageRef = CGImageCreate([self getWindowWidth], [self getWindowHeight], bitsPerComponent, bitsPerPixel, bytesPerRow, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
+    
+    // then make the uiimage from that
+    UIImage *myImage = [UIImage imageWithCGImage:imageRef];
+    return myImage;
 }
 
 
@@ -236,14 +430,14 @@
 {
 	if (!appSetupCalled)
 		[self setup];
-	    
-	if( ! animating ) {
-    displayLink = [NSClassFromString(@"CADisplayLink") displayLinkWithTarget:self selector:@selector(drawView:)];
-    [displayLink setFrameInterval:animationFrameInterval];
-    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     
+	if( ! animating ) {
+        displayLink = [NSClassFromString(@"CADisplayLink") displayLinkWithTarget:self selector:@selector(drawView:)];
+        [displayLink setFrameInterval:animationFrameInterval];
+        [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+        
 		animating = YES;
-     }
+    }
 }
 
 - (void)stopAnimation
@@ -256,12 +450,12 @@
 	}
 }
 
-- (NSInteger) animationFrameInterval
+- (NSInteger)animationFrameInterval
 {
 	return animationFrameInterval;
 }
 
-- (void) setAnimationFrameInterval:(NSInteger)frameInterval
+- (void)setAnimationFrameInterval:(NSInteger)frameInterval
 {
 	if ( frameInterval >= 1 ) {
 		animationFrameInterval = frameInterval;
@@ -317,7 +511,7 @@
  *	Some default GL parameters to be used in setup
  */
 
-- (void) glParams
+- (void)glParams
 {
 	gl::enableDepthWrite();
 	gl::enableDepthRead();
@@ -329,7 +523,7 @@
 
 
 /**
- *  Actual drawing with a default scene clearing
+ *  Actual drawing, to be overridden with your drawings (here with some default screen clearing)
  */
 
 - (void)draw {
@@ -341,7 +535,7 @@
 
 
 /**
- *  Cocoa'd general utils extracted from Cinder 
+ *  Cocoa'd general utils extracted from Cinder
  */
 
 - (double) getElapsedSeconds
@@ -371,15 +565,15 @@
 
 - (Surface)	copyWindowSurface:(Area) area
 {
-	Area clippedArea = area.getClipBy( [self getWindowBounds] );
+    //	Area clippedArea = area.getClipBy( [self getWindowBounds] );
     
 	Surface s( area.getWidth(), area.getHeight(), false );
 	glFlush(); // there is some disagreement about whether this is necessary, but ideally performance-conscious users will use FBOs anyway
 	GLint oldPackAlignment;
-	glGetIntegerv( GL_PACK_ALIGNMENT, &oldPackAlignment ); 
+	glGetIntegerv( GL_PACK_ALIGNMENT, &oldPackAlignment );
 	glPixelStorei( GL_PACK_ALIGNMENT, 1 );
 	glReadPixels( area.x1, [self getWindowHeight] - area.y2, area.getWidth(), area.getHeight(), GL_RGB, GL_UNSIGNED_BYTE, s.getData() );
-	glPixelStorei( GL_PACK_ALIGNMENT, oldPackAlignment );		
+	glPixelStorei( GL_PACK_ALIGNMENT, oldPackAlignment );
 	ip::flipVertical( &s );
 	return s;
 }
@@ -501,7 +695,7 @@
 	}
 	else {
 		for( UITouch *touch in touches ) {
-			CGPoint pt = [touch locationInView:self];		
+			CGPoint pt = [touch locationInView:self];
 			int mods = 0;
 			mods |= cinder::app::MouseEvent::LEFT_DOWN;
 			[self mouseDown:cinder::app::MouseEvent( cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
@@ -519,7 +713,7 @@
 		std::vector<ci::app::TouchEvent::Touch> touchList;
 		for( UITouch *touch in touches ) {
 			CGPoint pt = [touch locationInView:self];
-			CGPoint prevPt = [touch previousLocationInView:self];			
+			CGPoint prevPt = [touch previousLocationInView:self];
 			touchList.push_back( ci::app::TouchEvent::Touch( ci::Vec2f( pt.x, pt.y ) * contentScale, ci::Vec2f( prevPt.x, prevPt.y ) * contentScale, [self findTouchInMap:touch], [touch timestamp], touch ) );
 		}
 		[self updateActiveTouches];
@@ -528,7 +722,7 @@
 	}
 	else {
 		for( UITouch *touch in touches ) {
-			CGPoint pt = [touch locationInView:self];		
+			CGPoint pt = [touch locationInView:self];
 			int mods = 0;
 			mods |= cinder::app::MouseEvent::LEFT_DOWN;
 			[self mouseDrag:cinder::app::MouseEvent( cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
@@ -556,7 +750,7 @@
 	}
 	else {
 		for( UITouch *touch in touches ) {
-			CGPoint pt = [touch locationInView:self];		
+			CGPoint pt = [touch locationInView:self];
 			int mods = 0;
 			mods |= cinder::app::MouseEvent::LEFT_DOWN;
 			[self mouseUp:cinder::app::MouseEvent( cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
@@ -578,9 +772,9 @@
  */
 
 /*ResourceLoadExc::ResourceLoadExc( const string &macPath )
-{
-	sprintf( mMessage, "Failed to load resource: %s", macPath.c_str() );
-}*/
+ {
+ sprintf( mMessage, "Failed to load resource: %s", macPath.c_str() );
+ }*/
 
 - (DataSourcePathRef) loadResource:(string) macPath
 {
@@ -588,7 +782,7 @@
 	if( resourcePath.empty() )
 		;//throw ResourceLoadExc( macPath );
 	else
-		return DataSourcePath::createRef( resourcePath );
+		return DataSourcePath::create( resourcePath );
 }
 
 - (string) getResourcePath:(string) rsrcRelativePath

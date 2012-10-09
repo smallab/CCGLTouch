@@ -10,16 +10,9 @@
 		E05B9D8A1427CB1D00914BAF /* CCGLTouchAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05B9D841427CB1D00914BAF /* CCGLTouchAppDelegate.mm */; };
 		E05B9D8B1427CB1D00914BAF /* CCGLTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05B9D861427CB1D00914BAF /* CCGLTouchView.mm */; };
 		E05B9D8C1427CB1D00914BAF /* CCGLTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05B9D881427CB1D00914BAF /* CCGLTouchViewController.mm */; };
-		E05B9D8D1427CB1D00914BAF /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05B9D891427CB1D00914BAF /* main.mm */; };
-		E060B4E3141E2320008F9BDF /* MyCinderGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E060B4E2141E2320008F9BDF /* MyCinderGLView.mm */; };
 		E07A97DC14184F7F00DED91C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A97DB14184F7F00DED91C /* UIKit.framework */; };
 		E07A97DE14184F7F00DED91C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A97DD14184F7F00DED91C /* Foundation.framework */; };
 		E07A97E014184F7F00DED91C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A97DF14184F7F00DED91C /* CoreGraphics.framework */; };
-		E07A97E614184F7F00DED91C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E07A97E414184F7F00DED91C /* InfoPlist.strings */; };
-		E07A97EC14184F7F00DED91C /* MyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E07A97EB14184F7F00DED91C /* MyAppDelegate.mm */; };
-		E07A97EF14184F7F00DED91C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07A97ED14184F7F00DED91C /* MainWindow.xib */; };
-		E07A97F214184F7F00DED91C /* MyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E07A97F114184F7F00DED91C /* MyViewController.mm */; };
-		E07A97F514184F7F00DED91C /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07A97F314184F7F00DED91C /* MyViewController.xib */; };
 		E07A9821141850B500DED91C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A9819141850B500DED91C /* QuartzCore.framework */; };
 		E07A9822141850B500DED91C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A981A141850B500DED91C /* OpenGLES.framework */; };
 		E07A9823141850B500DED91C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A981B141850B500DED91C /* AudioToolbox.framework */; };
@@ -32,6 +25,16 @@
 		E07A982E141853B600DED91C /* libcinder-iphone-sim_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982A141853B600DED91C /* libcinder-iphone-sim_d.a */; };
 		E07A982F141853B600DED91C /* libcinder-iphone-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982B141853B600DED91C /* libcinder-iphone-sim.a */; };
 		E07A9830141853B600DED91C /* libcinder-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982C141853B600DED91C /* libcinder-iphone.a */; };
+		E07AEFB01621E66C005A004F /* MyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E07AEFAB1621E66C005A004F /* MyAppDelegate.mm */; };
+		E07AEFB11621E66C005A004F /* MyCCGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E07AEFAD1621E66C005A004F /* MyCCGLView.mm */; };
+		E07AEFB21621E66C005A004F /* MyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E07AEFAF1621E66C005A004F /* MyViewController.mm */; };
+		E07AEFB81621E67F005A004F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07AEFB41621E67F005A004F /* MainWindow.xib */; };
+		E07AEFB91621E67F005A004F /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E07AEFB61621E67F005A004F /* MyViewController.xib */; };
+		E07AEFBD1621E6A2005A004F /* CCGLTouchMayaCam-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E07AEFBB1621E6A2005A004F /* CCGLTouchMayaCam-Info.plist */; };
+		E07AEFC31621E6CA005A004F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E07AEFC11621E6CA005A004F /* InfoPlist.strings */; };
+		E07AEFC51621E6D9005A004F /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E07AEFC41621E6D9005A004F /* icon_retina.png */; };
+		E07AEFC71621E6DE005A004F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E07AEFC61621E6DE005A004F /* icon.png */; };
+		E07AEFCE1621E953005A004F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEFCD1621E953005A004F /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,22 +44,10 @@
 		E05B9D861427CB1D00914BAF /* CCGLTouchView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCGLTouchView.mm; sourceTree = "<group>"; };
 		E05B9D871427CB1D00914BAF /* CCGLTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGLTouchViewController.h; sourceTree = "<group>"; };
 		E05B9D881427CB1D00914BAF /* CCGLTouchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCGLTouchViewController.mm; sourceTree = "<group>"; };
-		E05B9D891427CB1D00914BAF /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
-		E060B4E1141E2320008F9BDF /* MyCinderGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCinderGLView.h; path = CCGLTBasic/MyCinderGLView.h; sourceTree = "<group>"; };
-		E060B4E2141E2320008F9BDF /* MyCinderGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyCinderGLView.mm; path = CCGLTBasic/MyCinderGLView.mm; sourceTree = "<group>"; };
 		E07A97D714184F7F00DED91C /* CCGLTouchMayaCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCGLTouchMayaCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07A97DB14184F7F00DED91C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E07A97DD14184F7F00DED91C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E07A97DF14184F7F00DED91C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E07A97E314184F7F00DED91C /* CCGLTouchMayaCam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCGLTouchMayaCam-Info.plist"; sourceTree = "<group>"; };
-		E07A97E514184F7F00DED91C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E07A97E914184F7F00DED91C /* CCGLTouchMayaCam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCGLTouchMayaCam-Prefix.pch"; sourceTree = "<group>"; };
-		E07A97EA14184F7F00DED91C /* MyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyAppDelegate.h; path = CCGLTBasic/MyAppDelegate.h; sourceTree = "<group>"; };
-		E07A97EB14184F7F00DED91C /* MyAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = MyAppDelegate.mm; path = CCGLTBasic/MyAppDelegate.mm; sourceTree = "<group>"; };
-		E07A97EE14184F7F00DED91C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		E07A97F014184F7F00DED91C /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyViewController.h; path = CCGLTBasic/MyViewController.h; sourceTree = "<group>"; };
-		E07A97F114184F7F00DED91C /* MyViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = MyViewController.mm; path = CCGLTBasic/MyViewController.mm; sourceTree = "<group>"; };
-		E07A97F414184F7F00DED91C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MyViewController.xib; sourceTree = "<group>"; };
 		E07A97FC14184F7F00DED91C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E07A9819141850B500DED91C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E07A981A141850B500DED91C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -70,6 +61,20 @@
 		E07A982A141853B600DED91C /* libcinder-iphone-sim_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim_d.a"; path = "../../lib/libcinder-iphone-sim_d.a"; sourceTree = "<group>"; };
 		E07A982B141853B600DED91C /* libcinder-iphone-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim.a"; path = "../../lib/libcinder-iphone-sim.a"; sourceTree = "<group>"; };
 		E07A982C141853B600DED91C /* libcinder-iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone.a"; path = "../../lib/libcinder-iphone.a"; sourceTree = "<group>"; };
+		E07AEFAA1621E66C005A004F /* MyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAppDelegate.h; path = CCGLTouchMayaCam/MyAppDelegate.h; sourceTree = "<group>"; };
+		E07AEFAB1621E66C005A004F /* MyAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyAppDelegate.mm; path = CCGLTouchMayaCam/MyAppDelegate.mm; sourceTree = "<group>"; };
+		E07AEFAC1621E66C005A004F /* MyCCGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCCGLView.h; path = CCGLTouchMayaCam/MyCCGLView.h; sourceTree = "<group>"; };
+		E07AEFAD1621E66C005A004F /* MyCCGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyCCGLView.mm; path = CCGLTouchMayaCam/MyCCGLView.mm; sourceTree = "<group>"; };
+		E07AEFAE1621E66C005A004F /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyViewController.h; path = CCGLTouchMayaCam/MyViewController.h; sourceTree = "<group>"; };
+		E07AEFAF1621E66C005A004F /* MyViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyViewController.mm; path = CCGLTouchMayaCam/MyViewController.mm; sourceTree = "<group>"; };
+		E07AEFB51621E67F005A004F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = CCGLTouchMayaCam/en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		E07AEFB71621E67F005A004F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = CCGLTouchMayaCam/en.lproj/MyViewController.xib; sourceTree = "<group>"; };
+		E07AEFBB1621E6A2005A004F /* CCGLTouchMayaCam-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CCGLTouchMayaCam-Info.plist"; path = "CCGLTouchMayaCam/CCGLTouchMayaCam-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E07AEFBC1621E6A2005A004F /* CCGLTouchMayaCam-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CCGLTouchMayaCam-Prefix.pch"; path = "CCGLTouchMayaCam/CCGLTouchMayaCam-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		E07AEFC21621E6CA005A004F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = CCGLTouchMayaCam/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E07AEFC41621E6D9005A004F /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = "<group>"; };
+		E07AEFC61621E6DE005A004F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E07AEFCD1621E953005A004F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,8 @@
 		E01227E1141E09B4002B212D /* MyAssets */ = {
 			isa = PBXGroup;
 			children = (
+				E07AEFB41621E67F005A004F /* MainWindow.xib */,
+				E07AEFB61621E67F005A004F /* MyViewController.xib */,
 			);
 			name = MyAssets;
 			sourceTree = "<group>";
@@ -114,7 +121,6 @@
 				E05B9D861427CB1D00914BAF /* CCGLTouchView.mm */,
 				E05B9D871427CB1D00914BAF /* CCGLTouchViewController.h */,
 				E05B9D881427CB1D00914BAF /* CCGLTouchViewController.mm */,
-				E05B9D891427CB1D00914BAF /* main.mm */,
 			);
 			path = CCGLTouchCore;
 			sourceTree = "<group>";
@@ -122,9 +128,11 @@
 		E07A97CC14184F7F00DED91C = {
 			isa = PBXGroup;
 			children = (
-				E01227E1141E09B4002B212D /* MyAssets */,
-				E0C68FCF141C52AD00370E8D /* MyClasses */,
+				E07AEFC61621E6DE005A004F /* icon.png */,
+				E07AEFC41621E6D9005A004F /* icon_retina.png */,
 				E05B9D821427CB1D00914BAF /* CCGLTouchCore */,
+				E0C68FCF141C52AD00370E8D /* MyClasses */,
+				E01227E1141E09B4002B212D /* MyAssets */,
 				E07A97E214184F7F00DED91C /* Supporting Files */,
 				E07A97DA14184F7F00DED91C /* Frameworks */,
 				E07A97D814184F7F00DED91C /* Products */,
@@ -165,25 +173,24 @@
 		E07A97E214184F7F00DED91C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E07A97E314184F7F00DED91C /* CCGLTouchMayaCam-Info.plist */,
-				E07A97E414184F7F00DED91C /* InfoPlist.strings */,
-				E07A97E914184F7F00DED91C /* CCGLTouchMayaCam-Prefix.pch */,
+				E07AEFCD1621E953005A004F /* main.m */,
+				E07AEFC11621E6CA005A004F /* InfoPlist.strings */,
+				E07AEFBB1621E6A2005A004F /* CCGLTouchMayaCam-Info.plist */,
+				E07AEFBC1621E6A2005A004F /* CCGLTouchMayaCam-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			path = CCGLTBasic;
+			path = CCGLTouchMayaCam;
 			sourceTree = "<group>";
 		};
 		E0C68FCF141C52AD00370E8D /* MyClasses */ = {
 			isa = PBXGroup;
 			children = (
-				E07A97EA14184F7F00DED91C /* MyAppDelegate.h */,
-				E07A97EB14184F7F00DED91C /* MyAppDelegate.mm */,
-				E07A97ED14184F7F00DED91C /* MainWindow.xib */,
-				E07A97F014184F7F00DED91C /* MyViewController.h */,
-				E07A97F114184F7F00DED91C /* MyViewController.mm */,
-				E07A97F314184F7F00DED91C /* MyViewController.xib */,
-				E060B4E1141E2320008F9BDF /* MyCinderGLView.h */,
-				E060B4E2141E2320008F9BDF /* MyCinderGLView.mm */,
+				E07AEFAA1621E66C005A004F /* MyAppDelegate.h */,
+				E07AEFAB1621E66C005A004F /* MyAppDelegate.mm */,
+				E07AEFAE1621E66C005A004F /* MyViewController.h */,
+				E07AEFAF1621E66C005A004F /* MyViewController.mm */,
+				E07AEFAC1621E66C005A004F /* MyCCGLView.h */,
+				E07AEFAD1621E66C005A004F /* MyCCGLView.mm */,
 			);
 			name = MyClasses;
 			sourceTree = "<group>";
@@ -204,7 +211,7 @@
 			dependencies = (
 			);
 			name = CCGLTouchMayaCam;
-			productName = CCGLTBasic;
+			productName = CCGLTouchMayaCam;
 			productReference = E07A97D714184F7F00DED91C /* CCGLTouchMayaCam.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -235,9 +242,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07A97E614184F7F00DED91C /* InfoPlist.strings in Resources */,
-				E07A97EF14184F7F00DED91C /* MainWindow.xib in Resources */,
-				E07A97F514184F7F00DED91C /* MyViewController.xib in Resources */,
+				E07AEFB81621E67F005A004F /* MainWindow.xib in Resources */,
+				E07AEFB91621E67F005A004F /* MyViewController.xib in Resources */,
+				E07AEFBD1621E6A2005A004F /* CCGLTouchMayaCam-Info.plist in Resources */,
+				E07AEFC31621E6CA005A004F /* InfoPlist.strings in Resources */,
+				E07AEFC51621E6D9005A004F /* icon_retina.png in Resources */,
+				E07AEFC71621E6DE005A004F /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,43 +258,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07A97EC14184F7F00DED91C /* MyAppDelegate.mm in Sources */,
-				E07A97F214184F7F00DED91C /* MyViewController.mm in Sources */,
-				E060B4E3141E2320008F9BDF /* MyCinderGLView.mm in Sources */,
 				E05B9D8A1427CB1D00914BAF /* CCGLTouchAppDelegate.mm in Sources */,
 				E05B9D8B1427CB1D00914BAF /* CCGLTouchView.mm in Sources */,
 				E05B9D8C1427CB1D00914BAF /* CCGLTouchViewController.mm in Sources */,
-				E05B9D8D1427CB1D00914BAF /* main.mm in Sources */,
+				E07AEFB01621E66C005A004F /* MyAppDelegate.mm in Sources */,
+				E07AEFB11621E66C005A004F /* MyCCGLView.mm in Sources */,
+				E07AEFB21621E66C005A004F /* MyViewController.mm in Sources */,
+				E07AEFCE1621E953005A004F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E07A97E414184F7F00DED91C /* InfoPlist.strings */ = {
+		E07AEFB41621E67F005A004F /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E07A97E514184F7F00DED91C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E07A97ED14184F7F00DED91C /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E07A97EE14184F7F00DED91C /* en */,
+				E07AEFB51621E67F005A004F /* en */,
 			);
 			name = MainWindow.xib;
-			path = CCGLTBasic;
 			sourceTree = "<group>";
 		};
-		E07A97F314184F7F00DED91C /* MyViewController.xib */ = {
+		E07AEFB61621E67F005A004F /* MyViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E07A97F414184F7F00DED91C /* en */,
+				E07AEFB71621E67F005A004F /* en */,
 			);
 			name = MyViewController.xib;
-			path = CCGLTBasic;
+			sourceTree = "<group>";
+		};
+		E07AEFC11621E6CA005A004F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E07AEFC21621E6CA005A004F /* en */,
+			);
+			name = InfoPlist.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -338,13 +347,14 @@
 			buildSettings = {
 				CINDER_PATH = ../..;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CCGLTBasic/CCGLTouchMayaCam-Prefix.pch";
+				GCC_PREFIX_HEADER = "CCGLTouchMayaCam/CCGLTouchMayaCam-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
-				INFOPLIST_FILE = "CCGLTBasic/CCGLTouchMayaCam-Info.plist";
+				INFOPLIST_FILE = "CCGLTouchMayaCam/CCGLTouchMayaCam-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../lib\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"";
 				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"";
@@ -361,13 +371,14 @@
 			buildSettings = {
 				CINDER_PATH = ../..;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "CCGLTBasic/CCGLTouchMayaCam-Prefix.pch";
+				GCC_PREFIX_HEADER = "CCGLTouchMayaCam/CCGLTouchMayaCam-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
-				INFOPLIST_FILE = "CCGLTBasic/CCGLTouchMayaCam-Info.plist";
+				INFOPLIST_FILE = "CCGLTouchMayaCam/CCGLTouchMayaCam-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../lib\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone.a\"";
 				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"";

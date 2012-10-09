@@ -8,21 +8,21 @@
 //  More info on the CCGLTouch project >> http://www.smallab.org/code/ccgl-touch/
 //  License & disclaimer >> see license.txt file included in the distribution package
 //
-//  
+//
 //  The Cinder source code is used under the following terms:
 //
 //
 //  Copyright (c) 2010, The Barbarian Group
 //  All rights reserved.
-//  
+//
 //  Redistribution and use in source and binary forms, with or without modification, are permitted provided that
 //  the following conditions are met:
-//  
+//
 //  * Redistributions of source code must retain the above copyright notice, this list of conditions and
 //  the following disclaimer.
 //  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and
 //  the following disclaimer in the documentation and/or other materials provided with the distribution.
-//  
+//
 //  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
 //  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
 //  PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
@@ -31,7 +31,7 @@
 //  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 //  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //  POSSIBILITY OF SUCH DAMAGE.
-//  
+//
 
 #define CINDER_COCOA_TOUCH
 
@@ -64,21 +64,30 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
+@protocol CCGLTouchViewDelegate
+- (EAGLSharegroup *)getThreadsSharegroup;
+@end
+
 /*
  This class wraps the CAEAGLLayer from CoreAnimation into a convenient UIView subclass.
  The view content is basically an EAGL surface you render your OpenGL scene into.
  Note that setting the view non-opaque will only work if the EAGL surface has an alpha channel.
  */
 @interface CCGLTouchView : UIView {
-
+    
 @private
 	// The pixel dimensions of the CAEAGLLayer
 	GLint backingWidth;
-	GLint backingHeight;	
+	GLint backingHeight;
 	// The OpenGL names for the framebuffer and renderbuffer used to render to this view
-	GLuint defaultFramebuffer, colorRenderbuffer, depthRenderbuffer;	
-
+	GLuint defaultFramebuffer, colorRenderbuffer, depthRenderbuffer;
+    //Buffer definitions for the MSAA (anti-aliasing)
+    GLuint ccglMsaaFramebuffer, ccglMsaaRenderBuffer, ccglMsaaDepthBuffer;
+    
 @protected
+    // OpenGL sharegroup
+    EAGLSharegroup *sharegroup;
+    
     // Animation
     BOOL animating;
 	float frameRate;
@@ -86,7 +95,7 @@ using namespace std;
     id displayLink;
 	long frameCount;
 	::CFAbsoluteTime startTime;
-
+    
 	// Events
     std::map<UITouch*,uint32_t>	mTouchIdMap;
 	std::vector<ci::app::TouchEvent::Touch> mActiveTouches;
@@ -95,23 +104,52 @@ using namespace std;
 	// Bounds of the current screen
 	CGRect bounds;
     
-    // setup flag
+    // App setup flag
 	BOOL appSetupCalled;
     
-    // multi-touch flag
+    // Anti-aliasing flag
+    BOOL antiAliasingEnabled;
+    
+    // Multi-touch flag
     BOOL multipleTouchEnabled;
+    
+    // Capture sketch
+    UIImage *ccglCapture;
+    BOOL ccglCaptureFlag;
+    
+    // Delegate
+    __unsafe_unretained id<CCGLTouchViewDelegate> _delegate;
 }
+@property (nonatomic, assign) id<CCGLTouchViewDelegate> delegate;
+
+
 
 /**
- *	Init & loop
+ *	initWithFrame, Bounds, Context, Sharegroup, layoutSubviews, Anti-aliasing
  */
 
 - (id)initWithFrame:(CGRect)frame;
+- (id)initWithFrame:(CGRect)frame andSharegroup:(EAGLSharegroup *)_sharegroup;
 - (void)setCurrentBounds:(CGRect)frame;
+- (EAGLSharegroup *)getThisSharegroup;
+- (EAGLContext *)getThisContext;
 - (void)layoutSubviews;
+- (void)layoutSubviewsWithoutMSAA;
+- (void)layoutSubviewsWithMSAA;
 - (void)drawView:(id)sender;
-/*- (void)setFrameSize:(CGSize)newSize;
-- (void)defaultResize;*/
+- (void)makeCurrentContext;
+- (void)flushBuffer;
+- (void)enableAntiAliasing;
+- (void)enableAntiAliasing:(BOOL)flag;
+- (BOOL)isAntiAliasingEnabled;
+
+/**
+ *  OpenGL capture methods
+ */
+
+- (void)captureNextFrame;
+-(void)sendCaptureToPhotoAlbum;
+- (UIImage *)glToUIImage;
 
 /**
  *	Handling "timer" loop and animation flag
@@ -177,12 +215,12 @@ using namespace std;
 
 //! Cinder's Exception for failed resource loading
 /*class ResourceLoadExc : public Exception
-{
-public:
-	ResourceLoadExc( const string &macPath );
-	virtual const char * what() const throw() { return mMessage; }
-	char mMessage[4096];
-};*/
+ {
+ public:
+ ResourceLoadExc( const string &macPath );
+ virtual const char * what() const throw() { return mMessage; }
+ char mMessage[4096];
+ };*/
 //! Cinder's
 //! Returns a DataSourceRef to an application resource. \a macPath is a path relative to the bundle's resources folder. Throws ResourceLoadExc on failure. \sa \ref CinderResources
 - (DataSourcePathRef)	loadResource:(string) macPath;

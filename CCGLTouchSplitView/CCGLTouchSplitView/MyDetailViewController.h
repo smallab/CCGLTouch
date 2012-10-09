@@ -8,12 +8,14 @@
 //  More info on the CCGLTouch project >> http://www.smallab.org/code/ccgl-touch/
 //  License & disclaimer >> see license.txt file included in the distribution package
 //
+//  Latest revision on 10/06/12.
+//
 
 #import "CCGLTouchViewController.h"
-#import "MyCinderGLView.h"
+#import "MyCCGLView.h"
 
 @interface MyDetailViewController : CCGLTouchViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> {
-    MyCinderGLView *glView;
+    MyCCGLView *ccglView;
 }
 
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
