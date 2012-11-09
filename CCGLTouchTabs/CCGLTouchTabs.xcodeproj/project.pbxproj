@@ -118,6 +118,7 @@
 		E01227E1141E09B4002B212D /* MyAssets */ = {
 			isa = PBXGroup;
 			children = (
+				E048A5A4162223BB009EDFEC /* Resources.h */,
 				E07A97ED14184F7F00DED91C /* MainWindow.xib */,
 				E07A97F314184F7F00DED91C /* MyViewController.xib */,
 				E060B52A141E3D92008F9BDF /* MySecondViewController.xib */,
@@ -210,7 +211,6 @@
 				E060B528141E3D8B008F9BDF /* MySecondViewController.mm */,
 				E060B52D141E4F30008F9BDF /* MySecondCinderGLView.h */,
 				E060B52E141E4F30008F9BDF /* MySecondCinderGLView.mm */,
-				E048A5A4162223BB009EDFEC /* Resources.h */,
 			);
 			name = MyClasses;
 			sourceTree = "<group>";

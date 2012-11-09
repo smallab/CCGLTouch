@@ -9,7 +9,7 @@
 
   The CCGLTouch wrapper is released under the BSD License. Please see below for details.
 
-  More info on the CCGL project >> http://www.cocoacid.org/
+  More info on the CCGL project >> http://cocoacid.org
 
 
   //////////////////
