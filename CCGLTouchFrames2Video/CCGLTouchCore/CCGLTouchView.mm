@@ -271,6 +271,7 @@
 	[self makeCurrentContext];
     [self draw];
 	[self flushBuffer];
+    [self presentCurrentContext];
 }
 
 - (void)makeCurrentContext
@@ -315,7 +316,7 @@
         glResolveMultisampleFramebufferAPPLE();
     }
     
-    // Capture skecth
+    // Capture sketch
     // This has to happen here, after buffers are combined
     if (ccglCaptureFlag) {
         glBindFramebufferOES(GL_FRAMEBUFFER_OES, defaultFramebuffer);
@@ -323,7 +324,10 @@
         [self sendCaptureToPhotoAlbum];
         ccglCaptureFlag = NO;
     }
-    
+}
+
+- (void)presentCurrentContext
+{
     // Present final image to screen
     glBindRenderbufferOES(GL_RENDERBUFFER_OES, colorRenderbuffer);
     [context presentRenderbuffer:GL_RENDERBUFFER_OES];

@@ -139,6 +139,7 @@ using namespace std;
 - (void)drawView:(id)sender;
 - (void)makeCurrentContext;
 - (void)flushBuffer;
+- (void)presentCurrentContext;
 - (void)enableAntiAliasing;
 - (void)enableAntiAliasing:(BOOL)flag;
 - (BOOL)isAntiAliasingEnabled;
