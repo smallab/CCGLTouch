@@ -89,7 +89,7 @@
         sharegroup = _sharegroup;
         
         // View scaling between devices
-		if( [[UIScreen mainScreen] respondsToSelector:@selector(scale:)] &&
+		if( [[UIScreen mainScreen] respondsToSelector:@selector(scale)] &&
            [self respondsToSelector:@selector(setContentScaleFactor:)] )
 			[self setContentScaleFactor:[[UIScreen mainScreen] scale]];
         
