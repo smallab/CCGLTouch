@@ -34,6 +34,9 @@
 		E07A982E141853B600DED91C /* libcinder-iphone-sim_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982A141853B600DED91C /* libcinder-iphone-sim_d.a */; };
 		E07A982F141853B600DED91C /* libcinder-iphone-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982B141853B600DED91C /* libcinder-iphone-sim.a */; };
 		E07A9830141853B600DED91C /* libcinder-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982C141853B600DED91C /* libcinder-iphone.a */; };
+		E0BBA68916DA70BB009BA170 /* icon_ipad_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA68816DA70BB009BA170 /* icon_ipad_retina.png */; };
+		E0BBA68B16DA70BE009BA170 /* icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA68A16DA70BE009BA170 /* icon_ipad.png */; };
+		E0BBA68D16DA70C6009BA170 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA68C16DA70C6009BA170 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		E07A982A141853B600DED91C /* libcinder-iphone-sim_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim_d.a"; path = "../../lib/libcinder-iphone-sim_d.a"; sourceTree = "<group>"; };
 		E07A982B141853B600DED91C /* libcinder-iphone-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim.a"; path = "../../lib/libcinder-iphone-sim.a"; sourceTree = "<group>"; };
 		E07A982C141853B600DED91C /* libcinder-iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone.a"; path = "../../lib/libcinder-iphone.a"; sourceTree = "<group>"; };
+		E0BBA68816DA70BB009BA170 /* icon_ipad_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad_retina.png; sourceTree = "<group>"; };
+		E0BBA68A16DA70BE009BA170 /* icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad.png; sourceTree = "<group>"; };
+		E0BBA68C16DA70C6009BA170 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 		E07A97CC14184F7F00DED91C = {
 			isa = PBXGroup;
 			children = (
+				E0BBA68C16DA70C6009BA170 /* Default-568h@2x.png */,
+				E0BBA68A16DA70BE009BA170 /* icon_ipad.png */,
+				E0BBA68816DA70BB009BA170 /* icon_ipad_retina.png */,
 				E048A599162220CB009EDFEC /* icon.png */,
 				E048A597162220C8009EDFEC /* icon_retina.png */,
 				E05B9D821427CB1D00914BAF /* CCGLTouchCore */,
@@ -246,6 +255,9 @@
 				E07A97F514184F7F00DED91C /* MyViewController.xib in Resources */,
 				E048A598162220C8009EDFEC /* icon_retina.png in Resources */,
 				E048A59A162220CB009EDFEC /* icon.png in Resources */,
+				E0BBA68916DA70BB009BA170 /* icon_ipad_retina.png in Resources */,
+				E0BBA68B16DA70BE009BA170 /* icon_ipad.png in Resources */,
+				E0BBA68D16DA70C6009BA170 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +356,7 @@
 		E07A981014184F7F00DED91C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchAccelerometer/CCGLTouchAccelerometer-Prefix.pch";
@@ -368,6 +381,7 @@
 		E07A981114184F7F00DED91C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchAccelerometer/CCGLTouchAccelerometer-Prefix.pch";

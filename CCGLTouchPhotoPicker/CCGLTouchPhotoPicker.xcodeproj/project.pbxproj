@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E048A5DD16222EB6009EDFEC /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E048A5DC16222EB6009EDFEC /* icon_retina.png */; };
 		E048A5DF16222EBA009EDFEC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E048A5DE16222EBA009EDFEC /* icon.png */; };
+		E0BBA6C116DA7511009BA170 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA6C016DA7511009BA170 /* Default-568h@2x.png */; };
 		E0F7CE49152A4BDC00B65BA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F7CE48152A4BDC00B65BA1 /* UIKit.framework */; };
 		E0F7CE4B152A4BDC00B65BA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F7CE4A152A4BDC00B65BA1 /* Foundation.framework */; };
 		E0F7CE4D152A4BDC00B65BA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F7CE4C152A4BDC00B65BA1 /* CoreGraphics.framework */; };
@@ -40,6 +41,7 @@
 		E048A5DB16222DB6009EDFEC /* MyCCGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCCGLView.h; sourceTree = "<group>"; };
 		E048A5DC16222EB6009EDFEC /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = "<group>"; };
 		E048A5DE16222EBA009EDFEC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E0BBA6C016DA7511009BA170 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E0F7CE44152A4BDC00B65BA1 /* CCGLTouchPhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCGLTouchPhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F7CE48152A4BDC00B65BA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E0F7CE4A152A4BDC00B65BA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +96,7 @@
 		E0F7CE39152A4BDC00B65BA1 = {
 			isa = PBXGroup;
 			children = (
+				E0BBA6C016DA7511009BA170 /* Default-568h@2x.png */,
 				E048A5DE16222EBA009EDFEC /* icon.png */,
 				E048A5DC16222EB6009EDFEC /* icon_retina.png */,
 				E0F7CE5C152A4BDC00B65BA1 /* CCGLTouchPhotoPicker */,
@@ -241,6 +244,7 @@
 				E0F7CE83152A4BDC00B65BA1 /* MyViewController.xib in Resources */,
 				E048A5DD16222EB6009EDFEC /* icon_retina.png in Resources */,
 				E048A5DF16222EBA009EDFEC /* icon.png in Resources */,
+				E0BBA6C116DA7511009BA170 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +325,7 @@
 		E0F7CE87152A4BDC00B65BA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				DEVICE_FAMILY = iPhone/iPad;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -354,7 +358,7 @@
 		E0F7CE88152A4BDC00B65BA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVICE_FAMILY = iPhone/iPad;

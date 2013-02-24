@@ -29,8 +29,13 @@
 
 
 /**
- *	dealing with the image picking
+ *	principally dealing with the image picking
  */
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.view sendSubviewToBack:ccglView];
+}
 
 - (void)viewDidLoad
 {
@@ -41,7 +46,6 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)img editingInfo:(NSDictionary *)editInfo
 {
-	image.image = img;
     [ccglView setImage:img];
 	[self dismissModalViewControllerAnimated:YES];
 }
@@ -52,13 +56,13 @@
  *  Cocoa UI methods
  */
 
-- (IBAction)grabImage
+- (IBAction)usePicture
 {
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 	[self presentModalViewController:self.imgPicker animated:YES];
 }
 
-- (IBAction)takePicture
+- (IBAction)takePhoto
 {
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
 	[self presentModalViewController:self.imgPicker animated:YES];

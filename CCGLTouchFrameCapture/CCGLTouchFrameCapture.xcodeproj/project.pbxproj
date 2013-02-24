@@ -30,6 +30,9 @@
 		E05BE46D157F832C00740148 /* MyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05BE46C157F832C00740148 /* MyViewController.mm */; };
 		E05BE470157F832C00740148 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05BE46F157F832C00740148 /* MainWindow.xib */; };
 		E05BE472157F832C00740148 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05BE471157F832C00740148 /* MyViewController.xib */; };
+		E0BBA69C16DA7299009BA170 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA69B16DA7299009BA170 /* Default-568h@2x.png */; };
+		E0BBA6A016DA72AF009BA170 /* icon_ipad_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA69F16DA72AF009BA170 /* icon_ipad_retina.png */; };
+		E0BBA6A216DA72B1009BA170 /* icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA6A116DA72B1009BA170 /* icon_ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		E05BE46C157F832C00740148 /* MyViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyViewController.mm; sourceTree = "<group>"; };
 		E05BE46F157F832C00740148 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		E05BE471157F832C00740148 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		E0BBA69B16DA7299009BA170 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E0BBA69F16DA72AF009BA170 /* icon_ipad_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad_retina.png; sourceTree = "<group>"; };
+		E0BBA6A116DA72B1009BA170 /* icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 		E05BE42E157F832C00740148 = {
 			isa = PBXGroup;
 			children = (
+				E0BBA69B16DA7299009BA170 /* Default-568h@2x.png */,
+				E0BBA6A116DA72B1009BA170 /* icon_ipad.png */,
+				E0BBA69F16DA72AF009BA170 /* icon_ipad_retina.png */,
 				E008F32816223A6C00361EC5 /* icon.png */,
 				E008F32616223A6900361EC5 /* icon_retina.png */,
 				E05BE451157F832C00740148 /* CCGLTouchFrameCapture */,
@@ -239,6 +248,9 @@
 				E05BE472157F832C00740148 /* MyViewController.xib in Resources */,
 				E008F32716223A6900361EC5 /* icon_retina.png in Resources */,
 				E008F32916223A6C00361EC5 /* icon.png in Resources */,
+				E0BBA69C16DA7299009BA170 /* Default-568h@2x.png in Resources */,
+				E0BBA6A016DA72AF009BA170 /* icon_ipad_retina.png in Resources */,
+				E0BBA6A216DA72B1009BA170 /* icon_ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +333,7 @@
 		E05BE476157F832C00740148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				DEVICE_FAMILY = iPhone/iPad;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -355,7 +367,7 @@
 		E05BE477157F832C00740148 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVICE_FAMILY = iPhone/iPad;

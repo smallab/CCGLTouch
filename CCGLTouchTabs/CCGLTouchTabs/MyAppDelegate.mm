@@ -21,11 +21,9 @@
     // First View Controller
     
 	// OpenGL View
-	MyCinderGLView *aView = [[MyCinderGLView alloc] init];
-	ccglView = aView;
-	[aView release];
 	ccglView = [[MyCinderGLView alloc] initWithFrame:CGRectMake(0.0, 0.0, (float)[UIScreen mainScreen].bounds.size.width, (float)[UIScreen mainScreen].bounds.size.height-120.0)];//[UIScreen mainScreen].bounds];
 	[[viewController view] addSubview:ccglView];
+    [ccglView release];
 	
     // set First View Controller's prop
     [viewController setGLView:ccglView];
@@ -34,11 +32,9 @@
     // Second View Controller
     
 	// OpenGL View
-	MySecondCinderGLView *aSecondView = [[MySecondCinderGLView alloc] init];
-	secondCcglView = aSecondView;
-	[aSecondView release];
 	secondCcglView = [[MySecondCinderGLView alloc] initWithFrame:CGRectMake(0.0, 0.0, (float)[UIScreen mainScreen].bounds.size.width, (float)[UIScreen mainScreen].bounds.size.height-120.0)];//[UIScreen mainScreen].bounds];
 	[[secondViewController view] addSubview:secondCcglView];
+    [secondCcglView release];
 	
     // set Second View Controller's prop
     [secondViewController setGLView:secondCcglView];

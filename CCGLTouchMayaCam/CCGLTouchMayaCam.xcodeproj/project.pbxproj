@@ -35,6 +35,9 @@
 		E07AEFC51621E6D9005A004F /* icon_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E07AEFC41621E6D9005A004F /* icon_retina.png */; };
 		E07AEFC71621E6DE005A004F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E07AEFC61621E6DE005A004F /* icon.png */; };
 		E07AEFCE1621E953005A004F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E07AEFCD1621E953005A004F /* main.m */; };
+		E0BBA67C16DA700A009BA170 /* icon_ipad_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA67B16DA700A009BA170 /* icon_ipad_retina.png */; };
+		E0BBA67E16DA700D009BA170 /* icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA67D16DA700D009BA170 /* icon_ipad.png */; };
+		E0BBA68016DA7023009BA170 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA67F16DA7023009BA170 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,9 @@
 		E07AEFC41621E6D9005A004F /* icon_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_retina.png; sourceTree = "<group>"; };
 		E07AEFC61621E6DE005A004F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E07AEFCD1621E953005A004F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E0BBA67B16DA700A009BA170 /* icon_ipad_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad_retina.png; sourceTree = "<group>"; };
+		E0BBA67D16DA700D009BA170 /* icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad.png; sourceTree = "<group>"; };
+		E0BBA67F16DA7023009BA170 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,9 @@
 		E07A97CC14184F7F00DED91C = {
 			isa = PBXGroup;
 			children = (
+				E0BBA67F16DA7023009BA170 /* Default-568h@2x.png */,
+				E0BBA67D16DA700D009BA170 /* icon_ipad.png */,
+				E0BBA67B16DA700A009BA170 /* icon_ipad_retina.png */,
 				E07AEFC61621E6DE005A004F /* icon.png */,
 				E07AEFC41621E6D9005A004F /* icon_retina.png */,
 				E05B9D821427CB1D00914BAF /* CCGLTouchCore */,
@@ -248,6 +257,9 @@
 				E07AEFC31621E6CA005A004F /* InfoPlist.strings in Resources */,
 				E07AEFC51621E6D9005A004F /* icon_retina.png in Resources */,
 				E07AEFC71621E6DE005A004F /* icon.png in Resources */,
+				E0BBA67C16DA700A009BA170 /* icon_ipad_retina.png in Resources */,
+				E0BBA67E16DA700D009BA170 /* icon_ipad.png in Resources */,
+				E0BBA68016DA7023009BA170 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +357,7 @@
 		E07A981014184F7F00DED91C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchMayaCam/CCGLTouchMayaCam-Prefix.pch";
@@ -369,6 +382,7 @@
 		E07A981114184F7F00DED91C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchMayaCam/CCGLTouchMayaCam-Prefix.pch";

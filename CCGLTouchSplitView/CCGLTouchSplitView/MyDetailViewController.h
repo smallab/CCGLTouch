@@ -17,10 +17,11 @@
 @interface MyDetailViewController : CCGLTouchViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> {
     MyCCGLView *ccglView;
 }
-
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
-
 @property (nonatomic, retain) id detailItem;
+
+
+- (void)setCCGLView:(MyCCGLView *)view;
 
 /**
  *  incoming from root view (choice of a table cell)

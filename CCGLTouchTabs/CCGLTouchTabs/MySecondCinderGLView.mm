@@ -40,7 +40,7 @@
     mCubeSize = 10;
     
     // Load texture
-	mTexture = gl::Texture( loadImage( [self loadResource:RES_IMAGE_SMALLAB] ) );
+	mTexture = gl::Texture( loadImage( [self loadResource:RES_IMAGE_COCOACID] ) );
     mTexture.enableAndBind();
 }
 

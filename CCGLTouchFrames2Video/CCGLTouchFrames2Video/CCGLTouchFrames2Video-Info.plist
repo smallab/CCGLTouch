@@ -16,6 +16,8 @@
 			<array>
 				<string>icon_retina.png</string>
 				<string>icon.png</string>
+				<string>icon_ipad_retina.png</string>
+				<string>icon_ipad.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>

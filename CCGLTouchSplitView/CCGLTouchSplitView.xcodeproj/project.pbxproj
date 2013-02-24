@@ -370,6 +370,7 @@
 		E0BFF2AC1426B62D00A1441B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -397,6 +398,7 @@
 		E0BFF2AD1426B62D00A1441B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = armv7;
 				CINDER_PATH = ../..;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

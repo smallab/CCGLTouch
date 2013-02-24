@@ -19,11 +19,9 @@
 - (void)launch
 {    
 	// OpenGL View
-	MyCCGLView *aView = [[MyCCGLView alloc] init];
-	ccglView = aView;
-	[aView release];
 	ccglView = [[MyCCGLView alloc] initWithFrame:CGRectMake(0.0, 44.0, (float)[UIScreen mainScreen].bounds.size.width, (float)[UIScreen mainScreen].bounds.size.height-44.0)];//[UIScreen mainScreen].bounds];
 	[[detailViewController view] addSubview:ccglView];
+    [ccglView release];
 	
     // set Detail View Controller's prop
     [detailViewController setCCGLView:ccglView];

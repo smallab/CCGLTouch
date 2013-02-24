@@ -14,7 +14,24 @@
 	<array>
 		<string>icon_retina.png</string>
 		<string>icon.png</string>
+		<string>icon_ipad_retina.png</string>
+		<string>icon_ipad.png</string>
 	</array>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>icon_retina.png</string>
+				<string>icon.png</string>
+				<string>icon_ipad_retina.png</string>
+				<string>icon_ipad.png</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>org.smallab.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>

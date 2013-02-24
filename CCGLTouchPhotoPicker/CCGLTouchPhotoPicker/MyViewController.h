@@ -17,9 +17,8 @@
 @interface MyViewController : CCGLTouchViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
     MyCCGLView *ccglView;
     
-    IBOutlet UIButton *usePictureButton;
-    IBOutlet UIButton *takePhotoButton;
-    IBOutlet UIImageView *image;
+    IBOutlet UIBarButtonItem *usePictureButton;
+    IBOutlet UIBarButtonItem *takePhotoButton;
 	UIImagePickerController *imgPicker;
 }
 
@@ -31,7 +30,7 @@
  *  Cocoa UI methods
  */
 
-- (IBAction)grabImage;
-- (IBAction)takePicture;
+- (IBAction)usePicture;
+- (IBAction)takePhoto;
 
 @end
