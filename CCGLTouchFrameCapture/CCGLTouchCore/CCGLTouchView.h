@@ -79,12 +79,12 @@ using namespace std;
 	// The pixel dimensions of the CAEAGLLayer
 	GLint backingWidth;
 	GLint backingHeight;
+    
+@protected
 	// The OpenGL names for the framebuffer and renderbuffer used to render to this view
 	GLuint defaultFramebuffer, colorRenderbuffer, depthRenderbuffer;
     //Buffer definitions for the MSAA (anti-aliasing)
     GLuint ccglMsaaFramebuffer, ccglMsaaRenderBuffer, ccglMsaaDepthBuffer;
-    
-@protected
     // OpenGL sharegroup
     EAGLSharegroup *sharegroup;
     
@@ -100,6 +100,9 @@ using namespace std;
     std::map<UITouch*,uint32_t>	mTouchIdMap;
 	std::vector<ci::app::TouchEvent::Touch> mActiveTouches;
 	ci::Vec3d					mAcceleration;
+    
+    // Retina display scaling
+    size_t retinaScaling;
     
 	// Bounds of the current screen
 	CGRect bounds;

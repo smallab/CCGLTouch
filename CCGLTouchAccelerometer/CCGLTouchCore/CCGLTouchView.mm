@@ -69,15 +69,31 @@
 - (id)initWithFrame:(CGRect)frame andSharegroup:(EAGLSharegroup *)_sharegroup
 {
 	if ( (self = [super initWithFrame:frame]) ) {
+        
+        // Retina or not
+        if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+            ([UIScreen mainScreen].scale == 2.0)) {
+            // Retina display
+            retinaScaling = 2;
+        } else {
+            // non-Retina display
+            retinaScaling = 1;
+        }
+        
+        // Apply scaling
+		if( [[UIScreen mainScreen] respondsToSelector:@selector(scale)] &&
+           [self respondsToSelector:@selector(setContentScaleFactor:)] )
+			[self setContentScaleFactor:[[UIScreen mainScreen] scale]];
+        
+        // Bounds of the current screen
+		[self setCurrentBounds:frame];
+
         // Animation
         animating = NO;
         frameRate = 30;
         frameCount = 0;
 		displayLink = nil;
         startTime = ::CFAbsoluteTimeGetCurrent();
-        
-        // Bounds of the current screen
-		[self setCurrentBounds:frame];
         
         // Init flags
 		appSetupCalled = NO;
@@ -87,11 +103,6 @@
         
         // OpenGL threading option
         sharegroup = _sharegroup;
-        
-        // View scaling between devices
-		if( [[UIScreen mainScreen] respondsToSelector:@selector(scale)] &&
-           [self respondsToSelector:@selector(setContentScaleFactor:)] )
-			[self setContentScaleFactor:[[UIScreen mainScreen] scale]];
         
         // Get the layer
         CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
@@ -118,8 +129,8 @@
 {
     // Bounds of the current screen
     bounds = frame;
-    backingWidth = bounds.size.width;
-    backingHeight = bounds.size.height;
+    backingWidth = bounds.size.width * retinaScaling;
+    backingHeight = bounds.size.height * retinaScaling;
 }
 
 - (void) allocateGraphics
@@ -325,7 +336,7 @@
         ccglCaptureFlag = NO;
     }
 }
-
+    
 - (void)presentCurrentContext
 {
     // Present final image to screen
@@ -360,8 +371,6 @@
 
 - (void)dealloc
 {
-    [self stopAnimation];
-    
     if ([EAGLContext currentContext] == context)
         [EAGLContext setCurrentContext:nil];
     [context release];
@@ -398,12 +407,14 @@
     glReadPixels(0, 0, [self getWindowWidth], [self getWindowHeight], GL_RGBA, GL_UNSIGNED_BYTE, buffer);
     
     // gl renders "upside down" so swap top to bottom into new array.
+    // Huh, no, not really it seems on iPhone 5 ???
     GLubyte *buffer2 = (GLubyte *) malloc(myDataLength);
     for(int y = 0; y < [self getWindowHeight]; y++)
     {
         for(int x = 0; x < [self getWindowWidth] * 4; x++)
         {
-            buffer2[([self getWindowHeight]-1 - y) * [self getWindowWidth] * 4 + x] = buffer[y * 4 * [self getWindowWidth] + x];
+//            buffer2[([self getWindowHeight]-1 - y) * [self getWindowWidth] * 4 + x] = buffer[y * 4 * [self getWindowWidth] + x];
+            buffer2[y * [self getWindowWidth] * 4 + x] = buffer[y * 4 * [self getWindowWidth] + x];
         }
     }
     
@@ -551,12 +562,12 @@
 
 - (int) getWindowWidth
 {
-	return bounds.size.width;
+	return bounds.size.width * retinaScaling;
 }
 
 - (int) getWindowHeight
 {
-	return bounds.size.height;
+	return bounds.size.height * retinaScaling;
 }
 
 - (Area) getWindowBounds
