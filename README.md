@@ -1,4 +1,6 @@
-**The CCGLTouch wrapper for iOS: [http://cocoacid.org/ios/](http://cocoacid.org/ios/)**
+The CCGLTouch wrapper for iOS: [http://cocoacid.org/ios/](http://cocoacid.org/ios/)
+====================================================
+
 
 CocoaCinderGL Touch eases the use of Cinder from within a typical XCode/Cocoa Touch project. Thus allowing C++/Obj-C creative coders to build iOS apps bearing several "Cinder sketches" as well as Cocoa sliders, buttons...
 

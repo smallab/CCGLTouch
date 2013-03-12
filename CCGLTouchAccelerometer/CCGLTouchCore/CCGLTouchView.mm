@@ -521,7 +521,7 @@
 	glMatrixMode( GL_MODELVIEW );
 	glLoadMatrixf( cam.getModelViewMatrix().m );
 	glScalef( 1.0f, -1.0f, 1.0f );           // invert Y axis so increasing Y goes down.
-	glTranslatef( 0.0f, (float)-[self frame].size.height, 0.0f );       // shift origin up to upper-left corner.
+	glTranslatef( 0.0f, (float)-backingHeight, 0.0f );       // shift origin up to upper-left corner.
 }
 
 /**
