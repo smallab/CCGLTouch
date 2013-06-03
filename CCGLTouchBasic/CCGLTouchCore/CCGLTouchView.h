@@ -46,7 +46,6 @@
 #include "cinder/app/AppCocoaTouch.h"
 #include "cinder/app/Renderer.h"
 #include "cinder/app/TouchEvent.h"
-#include "cinder/app/AccelEvent.h"
 #include "cinder/cocoa/CinderCocoaTouch.h"
 #include "cinder/DataSource.h"
 #include "cinder/Exception.h"
@@ -206,9 +205,9 @@ using namespace std;
 - (void)setActiveTouches:(std::vector<ci::app::TouchEvent::Touch>&)touches;
 - (std::vector<ci::app::TouchEvent::Touch>&)getActiveTouches;
 - (void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event;
-- (void)touchesBegan:(ci::app::TouchEvent)event;
-- (void)touchesMoved:(ci::app::TouchEvent)event;
-- (void)touchesEnded:(ci::app::TouchEvent)event;
+- (void)touchesBegan:(std::vector<ci::app::TouchEvent::Touch>&)touchList;
+- (void)touchesMoved:(std::vector<ci::app::TouchEvent::Touch>&)touchList;
+- (void)touchesEnded:(std::vector<ci::app::TouchEvent::Touch>&)touchList;
 - (void)mouseDown:(ci::app::MouseEvent)event;
 - (void)mouseDrag:(ci::app::MouseEvent)event;
 - (void)mouseUp:(ci::app::MouseEvent)event;

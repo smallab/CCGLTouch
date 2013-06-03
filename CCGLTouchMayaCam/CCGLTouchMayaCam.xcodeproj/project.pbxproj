@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E035BD08175C2A5E00BB0548 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E035BD07175C2A5E00BB0548 /* MobileCoreServices.framework */; };
+		E035BD0A175C2A6C00BB0548 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E035BD09175C2A6C00BB0548 /* ImageIO.framework */; };
 		E05B9D8A1427CB1D00914BAF /* CCGLTouchAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05B9D841427CB1D00914BAF /* CCGLTouchAppDelegate.mm */; };
 		E05B9D8B1427CB1D00914BAF /* CCGLTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05B9D861427CB1D00914BAF /* CCGLTouchView.mm */; };
 		E05B9D8C1427CB1D00914BAF /* CCGLTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05B9D881427CB1D00914BAF /* CCGLTouchViewController.mm */; };
@@ -16,15 +18,10 @@
 		E07A9821141850B500DED91C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A9819141850B500DED91C /* QuartzCore.framework */; };
 		E07A9822141850B500DED91C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A981A141850B500DED91C /* OpenGLES.framework */; };
 		E07A9823141850B500DED91C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A981B141850B500DED91C /* AudioToolbox.framework */; };
-		E07A9824141850B500DED91C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A981C141850B500DED91C /* libz.dylib */; };
 		E07A9825141850B500DED91C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A981D141850B500DED91C /* CoreVideo.framework */; };
 		E07A9826141850B500DED91C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A981E141850B500DED91C /* AVFoundation.framework */; };
 		E07A9827141850B500DED91C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A981F141850B500DED91C /* CoreMedia.framework */; };
 		E07A9828141850B500DED91C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A9820141850B500DED91C /* CoreText.framework */; };
-		E07A982D141853B600DED91C /* libcinder-iphone_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A9829141853B600DED91C /* libcinder-iphone_d.a */; };
-		E07A982E141853B600DED91C /* libcinder-iphone-sim_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982A141853B600DED91C /* libcinder-iphone-sim_d.a */; };
-		E07A982F141853B600DED91C /* libcinder-iphone-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982B141853B600DED91C /* libcinder-iphone-sim.a */; };
-		E07A9830141853B600DED91C /* libcinder-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E07A982C141853B600DED91C /* libcinder-iphone.a */; };
 		E07AEFB01621E66C005A004F /* MyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E07AEFAB1621E66C005A004F /* MyAppDelegate.mm */; };
 		E07AEFB11621E66C005A004F /* MyCCGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E07AEFAD1621E66C005A004F /* MyCCGLView.mm */; };
 		E07AEFB21621E66C005A004F /* MyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E07AEFAF1621E66C005A004F /* MyViewController.mm */; };
@@ -41,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E035BD07175C2A5E00BB0548 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E035BD09175C2A6C00BB0548 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E05B9D831427CB1D00914BAF /* CCGLTouchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGLTouchAppDelegate.h; sourceTree = "<group>"; };
 		E05B9D841427CB1D00914BAF /* CCGLTouchAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCGLTouchAppDelegate.mm; sourceTree = "<group>"; };
 		E05B9D851427CB1D00914BAF /* CCGLTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCGLTouchView.h; sourceTree = "<group>"; };
@@ -51,19 +50,13 @@
 		E07A97DB14184F7F00DED91C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E07A97DD14184F7F00DED91C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E07A97DF14184F7F00DED91C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E07A97FC14184F7F00DED91C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E07A9819141850B500DED91C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E07A981A141850B500DED91C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E07A981B141850B500DED91C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../../../../../System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
-		E07A981C141850B500DED91C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../../../usr/lib/libz.dylib; sourceTree = "<group>"; };
 		E07A981D141850B500DED91C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		E07A981E141850B500DED91C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E07A981F141850B500DED91C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		E07A9820141850B500DED91C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		E07A9829141853B600DED91C /* libcinder-iphone_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone_d.a"; path = "../../lib/libcinder-iphone_d.a"; sourceTree = "<group>"; };
-		E07A982A141853B600DED91C /* libcinder-iphone-sim_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim_d.a"; path = "../../lib/libcinder-iphone-sim_d.a"; sourceTree = "<group>"; };
-		E07A982B141853B600DED91C /* libcinder-iphone-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim.a"; path = "../../lib/libcinder-iphone-sim.a"; sourceTree = "<group>"; };
-		E07A982C141853B600DED91C /* libcinder-iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone.a"; path = "../../lib/libcinder-iphone.a"; sourceTree = "<group>"; };
 		E07AEFAA1621E66C005A004F /* MyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyAppDelegate.h; path = CCGLTouchMayaCam/MyAppDelegate.h; sourceTree = "<group>"; };
 		E07AEFAB1621E66C005A004F /* MyAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyAppDelegate.mm; path = CCGLTouchMayaCam/MyAppDelegate.mm; sourceTree = "<group>"; };
 		E07AEFAC1621E66C005A004F /* MyCCGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCCGLView.h; path = CCGLTouchMayaCam/MyCCGLView.h; sourceTree = "<group>"; };
@@ -94,15 +87,12 @@
 				E07A9821141850B500DED91C /* QuartzCore.framework in Frameworks */,
 				E07A9822141850B500DED91C /* OpenGLES.framework in Frameworks */,
 				E07A9823141850B500DED91C /* AudioToolbox.framework in Frameworks */,
-				E07A9824141850B500DED91C /* libz.dylib in Frameworks */,
 				E07A9825141850B500DED91C /* CoreVideo.framework in Frameworks */,
 				E07A9826141850B500DED91C /* AVFoundation.framework in Frameworks */,
 				E07A9827141850B500DED91C /* CoreMedia.framework in Frameworks */,
 				E07A9828141850B500DED91C /* CoreText.framework in Frameworks */,
-				E07A982D141853B600DED91C /* libcinder-iphone_d.a in Frameworks */,
-				E07A982E141853B600DED91C /* libcinder-iphone-sim_d.a in Frameworks */,
-				E07A982F141853B600DED91C /* libcinder-iphone-sim.a in Frameworks */,
-				E07A9830141853B600DED91C /* libcinder-iphone.a in Frameworks */,
+				E035BD08175C2A5E00BB0548 /* MobileCoreServices.framework in Frameworks */,
+				E035BD0A175C2A6C00BB0548 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,22 +149,18 @@
 		E07A97DA14184F7F00DED91C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E07A9829141853B600DED91C /* libcinder-iphone_d.a */,
-				E07A982A141853B600DED91C /* libcinder-iphone-sim_d.a */,
-				E07A982B141853B600DED91C /* libcinder-iphone-sim.a */,
-				E07A982C141853B600DED91C /* libcinder-iphone.a */,
+				E035BD07175C2A5E00BB0548 /* MobileCoreServices.framework */,
+				E035BD09175C2A6C00BB0548 /* ImageIO.framework */,
 				E07A9819141850B500DED91C /* QuartzCore.framework */,
 				E07A981A141850B500DED91C /* OpenGLES.framework */,
 				E07A97DB14184F7F00DED91C /* UIKit.framework */,
 				E07A97DD14184F7F00DED91C /* Foundation.framework */,
 				E07A97DF14184F7F00DED91C /* CoreGraphics.framework */,
 				E07A981B141850B500DED91C /* AudioToolbox.framework */,
-				E07A981C141850B500DED91C /* libz.dylib */,
 				E07A981D141850B500DED91C /* CoreVideo.framework */,
 				E07A981E141850B500DED91C /* AVFoundation.framework */,
 				E07A981F141850B500DED91C /* CoreMedia.framework */,
 				E07A9820141850B500DED91C /* CoreText.framework */,
-				E07A97FC14184F7F00DED91C /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -357,21 +343,26 @@
 		E07A981014184F7F00DED91C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				CINDER_PATH = ../..;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchMayaCam/CCGLTouchMayaCam-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
 				INFOPLIST_FILE = "CCGLTouchMayaCam/CCGLTouchMayaCam-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../lib\"",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"";
-				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"";
-				PREBINDING = NO;
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"",
+					"-lz",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"",
+					"-lz",
+				);
 				PRODUCT_NAME = CCGLTouchMayaCam;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" include";
@@ -382,21 +373,26 @@
 		E07A981114184F7F00DED91C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				CINDER_PATH = ../..;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchMayaCam/CCGLTouchMayaCam-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
 				INFOPLIST_FILE = "CCGLTouchMayaCam/CCGLTouchMayaCam-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../lib\"",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone.a\"";
-				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"";
-				PREBINDING = NO;
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone.a\"",
+					"-lz",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"",
+					"-lz",
+				);
 				PRODUCT_NAME = CCGLTouchMayaCam;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" include";

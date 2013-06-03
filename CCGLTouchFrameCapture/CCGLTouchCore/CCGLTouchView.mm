@@ -708,18 +708,21 @@
 		}
 		[self updateActiveTouches];
 		if( ! touchList.empty() )
-			[self touchesBegan:(ci::app::TouchEvent)touchList];
+			[self touchesBegan:touchList];
 	}
 	else {
 		for( UITouch *touch in touches ) {
+			id<WindowImplCocoa>		mImpl;
+            App *app;
+            WindowRef win = cinder::app::Window::privateCreate__( mImpl, app );
 			CGPoint pt = [touch locationInView:self];
 			int mods = 0;
 			mods |= cinder::app::MouseEvent::LEFT_DOWN;
-			[self mouseDown:cinder::app::MouseEvent( cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
+            [self mouseDown:cinder::app::MouseEvent( win, cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
 		}
 	}
 }
-- (void)touchesBegan:(ci::app::TouchEvent)event {}
+- (void)touchesBegan:(std::vector<ci::app::TouchEvent::Touch>&)touchList {}
 - (void)mouseDown:(ci::app::MouseEvent)event {}
 
 - (void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event
@@ -735,18 +738,21 @@
 		}
 		[self updateActiveTouches];
 		if( ! touchList.empty() )
-			[self touchesMoved:(ci::app::TouchEvent)touchList];
+			[self touchesMoved:touchList];
 	}
 	else {
 		for( UITouch *touch in touches ) {
+			id<WindowImplCocoa>		mImpl;
+            App *app;
+            WindowRef win = cinder::app::Window::privateCreate__( mImpl, app );
 			CGPoint pt = [touch locationInView:self];
 			int mods = 0;
 			mods |= cinder::app::MouseEvent::LEFT_DOWN;
-			[self mouseDrag:cinder::app::MouseEvent( cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
+			[self mouseDrag:cinder::app::MouseEvent( win, cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
 		}
 	}
 }
-- (void)touchesMoved:(ci::app::TouchEvent)event {}
+- (void)touchesMoved:(std::vector<ci::app::TouchEvent::Touch>&)touchList {}
 - (void)mouseDrag:(ci::app::MouseEvent)event {}
 
 - (void)touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event
@@ -763,18 +769,21 @@
 		}
 		[self updateActiveTouches];
 		if( ! touchList.empty() )
-			[self touchesEnded:(ci::app::TouchEvent)touchList];
+			[self touchesEnded:touchList];
 	}
 	else {
 		for( UITouch *touch in touches ) {
+			id<WindowImplCocoa>		mImpl;
+            App *app;
+            WindowRef win = cinder::app::Window::privateCreate__( mImpl, app );
 			CGPoint pt = [touch locationInView:self];
 			int mods = 0;
 			mods |= cinder::app::MouseEvent::LEFT_DOWN;
-			[self mouseUp:cinder::app::MouseEvent( cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
+			[self mouseUp:cinder::app::MouseEvent( win, cinder::app::MouseEvent::LEFT_DOWN, pt.x * contentScale, pt.y * contentScale, mods, 0.0f, 0 )];
 		}
 	}
 }
-- (void)touchesEnded:(ci::app::TouchEvent)event {}
+- (void)touchesEnded:(std::vector<ci::app::TouchEvent::Touch>&)touchList {}
 - (void)mouseUp:(ci::app::MouseEvent)event {}
 
 - (void) touchesCancelled:(NSSet*)touches withEvent:(UIEvent*)event

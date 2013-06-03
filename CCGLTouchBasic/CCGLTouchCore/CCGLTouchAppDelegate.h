@@ -43,7 +43,6 @@
 #include "cinder/app/AppCocoaTouch.h"
 #include "cinder/app/Renderer.h"
 #include "cinder/app/TouchEvent.h"
-#include "cinder/app/AccelEvent.h"
 #include "cinder/cocoa/CinderCocoaTouch.h"
 #include "cinder/DataSource.h"
 #include "cinder/Exception.h"
@@ -62,9 +61,6 @@ using namespace ci::app;
 using namespace std;
 
 @interface CCGLTouchAppDelegate : NSObject <UIApplicationDelegate, UIAccelerometerDelegate> {
-@private
-    Vec3f mLastAccel;
-    Vec3f mLastRawAccel;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
@@ -80,14 +76,5 @@ using namespace std;
  */
 
 - (std::string)getAppPath;
-
-/**
- *  Accelerometer
- */
-
-- (void)enableAccelerometer:(float)updateFrequency;
-- (void)disableAccelerometer;
-- (void)privateAccelerated:(Vec3f)direction;
-- (void)accelerated:(AccelEvent)event;
 
 @end

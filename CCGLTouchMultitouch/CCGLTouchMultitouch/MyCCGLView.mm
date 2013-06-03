@@ -83,25 +83,23 @@
  *  touch events
  */
 
-- (void)touchesBegan:(ci::app::TouchEvent)event
+- (void)touchesBegan:(std::vector<ci::app::TouchEvent::Touch>&)touchList
 {
-    console() << "Began: " << event << std::endl;
-	for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) {
+	for( vector<TouchEvent::Touch>::const_iterator touchIt = touchList.begin(); touchIt != touchList.end(); ++touchIt ) {
 		Color newColor( CM_HSV, Rand::randFloat(), 1, 1 );
 		mActivePoints.insert( make_pair( touchIt->getId(), TouchPoint( touchIt->getPos(), newColor ) ) );
 	}
 }
 
-- (void)touchesMoved:(ci::app::TouchEvent)event
+- (void)touchesMoved:(std::vector<ci::app::TouchEvent::Touch>&)touchList
 {    
-	for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt )
+	for( vector<TouchEvent::Touch>::const_iterator touchIt = touchList.begin(); touchIt != touchList.end(); ++touchIt )
 		mActivePoints[touchIt->getId()].addPoint( touchIt->getPos() );
 }
 
-- (void)touchesEnded:(ci::app::TouchEvent)event
+- (void)touchesEnded:(std::vector<ci::app::TouchEvent::Touch>&)touchList
 {
-    console() << "Ended: " << event << std::endl;
-	for( vector<TouchEvent::Touch>::const_iterator touchIt = event.getTouches().begin(); touchIt != event.getTouches().end(); ++touchIt ) {
+	for( vector<TouchEvent::Touch>::const_iterator touchIt = touchList.begin(); touchIt != touchList.end(); ++touchIt ) {
 		mActivePoints[touchIt->getId()].startDying();
 		mDyingPoints.push_back( mActivePoints[touchIt->getId()] );
 		mActivePoints.erase( touchIt->getId() );

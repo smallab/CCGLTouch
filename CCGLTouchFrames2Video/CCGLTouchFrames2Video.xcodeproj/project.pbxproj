@@ -26,6 +26,8 @@
 		E05BE4B7157F8A3A00740148 /* MyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E05BE4B6157F8A3A00740148 /* MyViewController.mm */; };
 		E05BE4BA157F8A3A00740148 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05BE4B9157F8A3A00740148 /* MainWindow.xib */; };
 		E05BE4BC157F8A3A00740148 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E05BE4BB157F8A3A00740148 /* MyViewController.xib */; };
+		E08567B8175C455B0043F5B7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08567B6175C455B0043F5B7 /* MobileCoreServices.framework */; };
+		E08567B9175C455B0043F5B7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08567B7175C455B0043F5B7 /* ImageIO.framework */; };
 		E0BBA6A816DA732C009BA170 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA6A716DA732C009BA170 /* Default-568h@2x.png */; };
 		E0BBA6AD16DA7354009BA170 /* icon_ipad_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA6AC16DA7354009BA170 /* icon_ipad_retina.png */; };
 		E0BBA6AF16DA7357009BA170 /* icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E0BBA6AE16DA7357009BA170 /* icon_ipad.png */; };
@@ -63,6 +65,8 @@
 		E05BE4B6157F8A3A00740148 /* MyViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyViewController.mm; sourceTree = "<group>"; };
 		E05BE4B9157F8A3A00740148 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		E05BE4BB157F8A3A00740148 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		E08567B6175C455B0043F5B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E08567B7175C455B0043F5B7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E0BBA6A716DA732C009BA170 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E0BBA6AC16DA7354009BA170 /* icon_ipad_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad_retina.png; sourceTree = "<group>"; };
 		E0BBA6AE16DA7357009BA170 /* icon_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_ipad.png; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				E05BE496157F8A3A00740148 /* AVFoundation.framework in Frameworks */,
 				E05BE498157F8A3A00740148 /* CoreMedia.framework in Frameworks */,
 				E05BE49A157F8A3A00740148 /* CoreText.framework in Frameworks */,
+				E08567B8175C455B0043F5B7 /* MobileCoreServices.framework in Frameworks */,
+				E08567B9175C455B0043F5B7 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +123,8 @@
 		E05BE486157F8A3A00740148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E08567B6175C455B0043F5B7 /* MobileCoreServices.framework */,
+				E08567B7175C455B0043F5B7 /* ImageIO.framework */,
 				E05BE487157F8A3A00740148 /* UIKit.framework */,
 				E05BE489157F8A3A00740148 /* Foundation.framework */,
 				E05BE48B157F8A3A00740148 /* CoreGraphics.framework */,
@@ -329,34 +337,30 @@
 		E05BE4C0157F8A3A00740148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				CINDER_PATH = ../..;
-				DEVICE_FAMILY = iPhone/iPad;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchFrames2Video/CCGLTouchFrames2Video-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(CINDER_PATH)/include",
-					"$(CINDER_PATH)/boost",
-				);
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
 				INFOPLIST_FILE = "CCGLTouchFrames2Video/CCGLTouchFrames2Video-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(CINDER_PATH)/lib",
-					"$(CINDER_PATH)/lib/ios",
-					"$(CINDER_PATH)/lib/ios-sim",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					/usr/lib/libz.dylib,
-					"$(CINDER_PATH)/lib/libcinder-iphone_d.a",
-					"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a",
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"",
+					"-lz",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"",
+					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(CINDER_PATH)/include";
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -364,35 +368,31 @@
 		E05BE4C1157F8A3A00740148 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				CINDER_PATH = ../..;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVICE_FAMILY = iPhone/iPad;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchFrames2Video/CCGLTouchFrames2Video-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(CINDER_PATH)/include",
-					"$(CINDER_PATH)/boost",
-				);
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
 				INFOPLIST_FILE = "CCGLTouchFrames2Video/CCGLTouchFrames2Video-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(CINDER_PATH)/lib",
-					"$(CINDER_PATH)/lib/ios",
-					"$(CINDER_PATH)/lib/ios-sim",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = (
-					/usr/lib/libz.dylib,
-					"$(CINDER_PATH)/lib/libcinder-iphone.a",
-					"$(CINDER_PATH)/lib/libcinder-iphone-sim.a",
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone.a\"",
+					"-lz",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"",
+					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(CINDER_PATH)/include";
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

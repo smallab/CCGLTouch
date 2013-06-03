@@ -21,10 +21,8 @@
     if (self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier]) {
         // Initialization code
         primaryLabel = [[UILabel alloc]init];
-        primaryLabel.textAlignment = UITextAlignmentLeft;
         primaryLabel.font = [UIFont systemFontOfSize:14];
         secondaryLabel = [[UILabel alloc]init];
-        secondaryLabel.textAlignment = UITextAlignmentLeft;
         secondaryLabel.font = [UIFont systemFontOfSize:8];
         myImageView = [[UIImageView alloc]init];
         [self.contentView addSubview:primaryLabel];

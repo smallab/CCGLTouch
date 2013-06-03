@@ -13,7 +13,6 @@
 
 #import "MyCCGLView.h"
 
-#include "cinder/ImageSourceFileUiImage.h"
 #include "cinder/cocoa/CinderCocoa.h"
 #include <UIKit/UIImage.h>
 

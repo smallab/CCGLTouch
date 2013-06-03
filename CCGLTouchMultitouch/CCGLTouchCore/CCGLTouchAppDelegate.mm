@@ -57,7 +57,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {    
     application.applicationSupportsShakeToEdit = YES;
-    mLastAccel = mLastRawAccel = Vec3f::zero();
     
     // Override point for customization after application launch
     [self launch];
@@ -122,48 +121,5 @@
 { 
 	return [[[NSBundle mainBundle] bundlePath] UTF8String];
 }
-
-
-
-/**
- *  Accelerometer
- */
-
-//! Enables the device's accelerometer and modifies its filtering. \a updateFrequency represents the frequency with which accelerated() is called, measured in Hz. \a filterFactor represents the amount to weight the current value relative to the previous.
-- (void)enableAccelerometer:(float)updateFrequency //, float filterFactor )
-{
-	//mAccelFilterFactor = filterFactor;
-	
-	if( updateFrequency <= 0 )
-		updateFrequency = 30.0f;
-	
-	[[UIAccelerometer sharedAccelerometer] setUpdateInterval:1.0 / updateFrequency];
-	[[UIAccelerometer sharedAccelerometer] setDelegate:self];
-}
-//! Turns off the accelerometer
-- (void)disableAccelerometer
-{
-	[[UIAccelerometer sharedAccelerometer] setDelegate:nil];
-}
-
-- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)thisAcceleration
-{
-	// Massage the UIAcceleration class into a Vec3f
-	Vec3f direction( thisAcceleration.x, thisAcceleration.y, thisAcceleration.z );
-	[self privateAccelerated:direction];
-}
-
-- (void)privateAccelerated:(Vec3f)direction
-{
-    float mAccelFilterFactor = 0.1f;
-	Vec3f filtered = mLastAccel * (1.0f - mAccelFilterFactor) + direction * mAccelFilterFactor;
-	AccelEvent event( filtered, direction, mLastAccel, mLastRawAccel );
-    [self accelerated:event];
-    
-	mLastAccel = filtered;
-	mLastRawAccel = direction;
-}
-
-- (void)accelerated:(AccelEvent)event {}
 
 @end

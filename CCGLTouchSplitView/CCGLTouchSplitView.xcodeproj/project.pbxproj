@@ -11,9 +11,8 @@
 		E0407A641622631B000E6CF8 /* icon_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E0407A631622631B000E6CF8 /* icon_ipad.png */; };
 		E0411D5A142D5CF000A93374 /* MyTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0411D58142D5CF000A93374 /* MyTableViewCell.mm */; };
 		E048A5B516222841009EDFEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E048A5B416222841009EDFEC /* main.m */; };
-		E0BFF28C1426B62D00A1441B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28B1426B62D00A1441B /* UIKit.framework */; };
-		E0BFF28E1426B62D00A1441B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28D1426B62D00A1441B /* Foundation.framework */; };
-		E0BFF2901426B62D00A1441B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF28F1426B62D00A1441B /* CoreGraphics.framework */; };
+		E08567C0175C479D0043F5B7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08567BE175C479D0043F5B7 /* MobileCoreServices.framework */; };
+		E08567C1175C479D0043F5B7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08567BF175C479D0043F5B7 /* ImageIO.framework */; };
 		E0BFF2961426B62D00A1441B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0BFF2941426B62D00A1441B /* InfoPlist.strings */; };
 		E0BFF29C1426B62D00A1441B /* MyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF29B1426B62D00A1441B /* MyAppDelegate.mm */; };
 		E0BFF29F1426B62D00A1441B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0BFF29D1426B62D00A1441B /* MainWindow.xib */; };
@@ -24,22 +23,16 @@
 		E0BFF2C91426B6D100A1441B /* CCGLTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2C51426B6D100A1441B /* CCGLTouchViewController.mm */; };
 		E0BFF2D01426B75600A1441B /* MyDetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2CC1426B75600A1441B /* MyDetailViewController.mm */; };
 		E0BFF2D21426B75600A1441B /* MyCCGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BFF2CF1426B75600A1441B /* MyCCGLView.mm */; };
-		E0BFF2E31426B79C00A1441B /* libcinder-iphone_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D31426B79C00A1441B /* libcinder-iphone_d.a */; };
-		E0BFF2E41426B79C00A1441B /* libcinder-iphone-sim_d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D41426B79C00A1441B /* libcinder-iphone-sim_d.a */; };
-		E0BFF2E51426B79C00A1441B /* libcinder-iphone-sim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D51426B79C00A1441B /* libcinder-iphone-sim.a */; };
-		E0BFF2E61426B79C00A1441B /* libcinder-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D61426B79C00A1441B /* libcinder-iphone.a */; };
 		E0BFF2E71426B79C00A1441B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D71426B79C00A1441B /* QuartzCore.framework */; };
 		E0BFF2E81426B79C00A1441B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D81426B79C00A1441B /* OpenGLES.framework */; };
 		E0BFF2E91426B79C00A1441B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2D91426B79C00A1441B /* UIKit.framework */; };
 		E0BFF2EA1426B79C00A1441B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DA1426B79C00A1441B /* Foundation.framework */; };
 		E0BFF2EB1426B79C00A1441B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DB1426B79C00A1441B /* CoreGraphics.framework */; };
 		E0BFF2EC1426B79C00A1441B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DC1426B79C00A1441B /* AudioToolbox.framework */; };
-		E0BFF2ED1426B79C00A1441B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DD1426B79C00A1441B /* libz.dylib */; };
 		E0BFF2EE1426B79C00A1441B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DE1426B79C00A1441B /* CoreVideo.framework */; };
 		E0BFF2EF1426B79C00A1441B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2DF1426B79C00A1441B /* AVFoundation.framework */; };
 		E0BFF2F01426B79C00A1441B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2E01426B79C00A1441B /* CoreMedia.framework */; };
 		E0BFF2F11426B79C00A1441B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2E11426B79C00A1441B /* CoreText.framework */; };
-		E0BFF2F21426B79C00A1441B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0BFF2E21426B79C00A1441B /* SenTestingKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +41,9 @@
 		E0411D57142D5CF000A93374 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
 		E0411D58142D5CF000A93374 /* MyTableViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyTableViewCell.mm; sourceTree = "<group>"; };
 		E048A5B416222841009EDFEC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E08567BE175C479D0043F5B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E08567BF175C479D0043F5B7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E0BFF2871426B62D00A1441B /* CCGLTouchSplitView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCGLTouchSplitView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0BFF28B1426B62D00A1441B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E0BFF28D1426B62D00A1441B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E0BFF28F1426B62D00A1441B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E0BFF2931426B62D00A1441B /* CCGLTouchSplitView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCGLTouchSplitView-Info.plist"; sourceTree = "<group>"; };
 		E0BFF2951426B62D00A1441B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E0BFF2991426B62D00A1441B /* CCGLTouchSplitView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCGLTouchSplitView-Prefix.pch"; sourceTree = "<group>"; };
@@ -71,22 +63,16 @@
 		E0BFF2CC1426B75600A1441B /* MyDetailViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyDetailViewController.mm; sourceTree = "<group>"; };
 		E0BFF2CE1426B75600A1441B /* MyCCGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCCGLView.h; sourceTree = "<group>"; };
 		E0BFF2CF1426B75600A1441B /* MyCCGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyCCGLView.mm; sourceTree = "<group>"; };
-		E0BFF2D31426B79C00A1441B /* libcinder-iphone_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone_d.a"; path = "../../lib/libcinder-iphone_d.a"; sourceTree = "<group>"; };
-		E0BFF2D41426B79C00A1441B /* libcinder-iphone-sim_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim_d.a"; path = "../../lib/libcinder-iphone-sim_d.a"; sourceTree = "<group>"; };
-		E0BFF2D51426B79C00A1441B /* libcinder-iphone-sim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone-sim.a"; path = "../../lib/libcinder-iphone-sim.a"; sourceTree = "<group>"; };
-		E0BFF2D61426B79C00A1441B /* libcinder-iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcinder-iphone.a"; path = "../../lib/libcinder-iphone.a"; sourceTree = "<group>"; };
 		E0BFF2D71426B79C00A1441B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E0BFF2D81426B79C00A1441B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		E0BFF2D91426B79C00A1441B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E0BFF2DA1426B79C00A1441B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E0BFF2DB1426B79C00A1441B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E0BFF2DC1426B79C00A1441B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../../../../../System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<group>"; };
-		E0BFF2DD1426B79C00A1441B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = ../../../../../../../usr/lib/libz.dylib; sourceTree = "<group>"; };
 		E0BFF2DE1426B79C00A1441B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		E0BFF2DF1426B79C00A1441B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E0BFF2E01426B79C00A1441B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		E0BFF2E11426B79C00A1441B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		E0BFF2E21426B79C00A1441B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,25 +80,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0BFF28C1426B62D00A1441B /* UIKit.framework in Frameworks */,
-				E0BFF28E1426B62D00A1441B /* Foundation.framework in Frameworks */,
-				E0BFF2901426B62D00A1441B /* CoreGraphics.framework in Frameworks */,
-				E0BFF2E31426B79C00A1441B /* libcinder-iphone_d.a in Frameworks */,
-				E0BFF2E41426B79C00A1441B /* libcinder-iphone-sim_d.a in Frameworks */,
-				E0BFF2E51426B79C00A1441B /* libcinder-iphone-sim.a in Frameworks */,
-				E0BFF2E61426B79C00A1441B /* libcinder-iphone.a in Frameworks */,
 				E0BFF2E71426B79C00A1441B /* QuartzCore.framework in Frameworks */,
 				E0BFF2E81426B79C00A1441B /* OpenGLES.framework in Frameworks */,
 				E0BFF2E91426B79C00A1441B /* UIKit.framework in Frameworks */,
 				E0BFF2EA1426B79C00A1441B /* Foundation.framework in Frameworks */,
 				E0BFF2EB1426B79C00A1441B /* CoreGraphics.framework in Frameworks */,
 				E0BFF2EC1426B79C00A1441B /* AudioToolbox.framework in Frameworks */,
-				E0BFF2ED1426B79C00A1441B /* libz.dylib in Frameworks */,
 				E0BFF2EE1426B79C00A1441B /* CoreVideo.framework in Frameworks */,
 				E0BFF2EF1426B79C00A1441B /* AVFoundation.framework in Frameworks */,
 				E0BFF2F01426B79C00A1441B /* CoreMedia.framework in Frameworks */,
 				E0BFF2F11426B79C00A1441B /* CoreText.framework in Frameworks */,
-				E0BFF2F21426B79C00A1441B /* SenTestingKit.framework in Frameworks */,
+				E08567C0175C479D0043F5B7 /* MobileCoreServices.framework in Frameworks */,
+				E08567C1175C479D0043F5B7 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,25 +123,18 @@
 		E0BFF28A1426B62D00A1441B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E0BFF2D31426B79C00A1441B /* libcinder-iphone_d.a */,
-				E0BFF2D41426B79C00A1441B /* libcinder-iphone-sim_d.a */,
-				E0BFF2D51426B79C00A1441B /* libcinder-iphone-sim.a */,
-				E0BFF2D61426B79C00A1441B /* libcinder-iphone.a */,
+				E08567BE175C479D0043F5B7 /* MobileCoreServices.framework */,
+				E08567BF175C479D0043F5B7 /* ImageIO.framework */,
 				E0BFF2D71426B79C00A1441B /* QuartzCore.framework */,
 				E0BFF2D81426B79C00A1441B /* OpenGLES.framework */,
 				E0BFF2D91426B79C00A1441B /* UIKit.framework */,
 				E0BFF2DA1426B79C00A1441B /* Foundation.framework */,
 				E0BFF2DB1426B79C00A1441B /* CoreGraphics.framework */,
 				E0BFF2DC1426B79C00A1441B /* AudioToolbox.framework */,
-				E0BFF2DD1426B79C00A1441B /* libz.dylib */,
 				E0BFF2DE1426B79C00A1441B /* CoreVideo.framework */,
 				E0BFF2DF1426B79C00A1441B /* AVFoundation.framework */,
 				E0BFF2E01426B79C00A1441B /* CoreMedia.framework */,
 				E0BFF2E11426B79C00A1441B /* CoreText.framework */,
-				E0BFF2E21426B79C00A1441B /* SenTestingKit.framework */,
-				E0BFF28B1426B62D00A1441B /* UIKit.framework */,
-				E0BFF28D1426B62D00A1441B /* Foundation.framework */,
-				E0BFF28F1426B62D00A1441B /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -370,25 +342,26 @@
 		E0BFF2AC1426B62D00A1441B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				CINDER_PATH = ../..;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchSplitView/CCGLTouchSplitView-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
 				INFOPLIST_FILE = "CCGLTouchSplitView/CCGLTouchSplitView-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../lib\"",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"";
-				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"";
-				PREBINDING = NO;
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone_d.a\"",
+					"-lz",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim_d.a\"",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" include";
 				WRAPPER_EXTENSION = app;
@@ -398,25 +371,26 @@
 		E0BFF2AD1426B62D00A1441B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				CINDER_PATH = ../..;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchSplitView/CCGLTouchSplitView-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
 				INFOPLIST_FILE = "CCGLTouchSplitView/CCGLTouchSplitView-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../lib\"",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
-				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone.a\"";
-				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = "\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"";
-				PREBINDING = NO;
+				"OTHER_LDFLAGS[sdk=iphoneos*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone.a\"",
+					"-lz",
+				);
+				"OTHER_LDFLAGS[sdk=iphonesimulator*][arch=*]" = (
+					"\"$(CINDER_PATH)/lib/libcinder-iphone-sim.a\"",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" include";
 				WRAPPER_EXTENSION = app;
