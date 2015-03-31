@@ -232,6 +232,8 @@
 /* Begin PBXProject section */
 		E07A97CE14184F7F00DED91C /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E07A97D114184F7F00DED91C /* Build configuration list for PBXProject "CCGLTouchTabs" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -372,7 +374,10 @@
 		E07A981014184F7F00DED91C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				CINDER_PATH = ../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -402,7 +407,10 @@
 		E07A981114184F7F00DED91C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				CINDER_PATH = ../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";

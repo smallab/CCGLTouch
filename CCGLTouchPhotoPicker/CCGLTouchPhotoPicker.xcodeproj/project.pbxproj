@@ -220,6 +220,8 @@
 /* Begin PBXProject section */
 		E0F7CE3B152A4BDC00B65BA1 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E0F7CE3E152A4BDC00B65BA1 /* Build configuration list for PBXProject "CCGLTouchPhotoPicker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -333,7 +335,10 @@
 		E0F7CE87152A4BDC00B65BA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				CINDER_PATH = ../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -363,7 +368,10 @@
 		E0F7CE88152A4BDC00B65BA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				CINDER_PATH = ../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";

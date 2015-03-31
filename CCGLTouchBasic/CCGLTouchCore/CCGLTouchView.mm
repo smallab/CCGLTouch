@@ -10,6 +10,7 @@
 //
 //
 //  Latest update for Cinder v0.8.5: 06/02/2013
+//  Latest update for XCode 6 & llvm 6.0 & iOS SDK 8.1: 31/03/2015
 //
 //
 //  The Cinder source code is used under the following terms:
@@ -260,9 +261,9 @@
     // To allow depth calculations (typically for 3D drawings)
     // These 4 lines could be ignored if no calculation for depth is needed (ie. transparent 2D drawings, etc.)
     glGenRenderbuffersOES(1, &ccglMsaaDepthBuffer);
-    glBindRenderbufferOES(GL_RENDERBUFFER, ccglMsaaDepthBuffer);
-    glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER, 4, GL_DEPTH_COMPONENT16, backingWidth, backingHeight);
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, ccglMsaaDepthBuffer);
+    glBindRenderbufferOES(GL_RENDERBUFFER_OES, ccglMsaaDepthBuffer);
+    glRenderbufferStorageMultisampleAPPLE(GL_RENDERBUFFER_OES, 4, GL_DEPTH_COMPONENT16_OES, backingWidth, backingHeight);
+    glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_DEPTH_ATTACHMENT_OES, GL_RENDERBUFFER_OES, ccglMsaaDepthBuffer);
     
     // Verify it worked
     if( glCheckFramebufferStatusOES(GL_FRAMEBUFFER_OES) != GL_FRAMEBUFFER_COMPLETE_OES ) {

@@ -216,6 +216,8 @@
 /* Begin PBXProject section */
 		E0BFF27E1426B62D00A1441B /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = E0BFF2811426B62D00A1441B /* Build configuration list for PBXProject "CCGLTouchSplitView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -342,7 +344,10 @@
 		E0BFF2AC1426B62D00A1441B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				CINDER_PATH = ../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -371,7 +376,10 @@
 		E0BFF2AD1426B62D00A1441B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				CINDER_PATH = ../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";

@@ -10,6 +10,7 @@
 //
 //
 //  Latest update for Cinder v0.8.5: 06/02/2013
+//  Latest update for XCode 6 & llvm 6.0 & iOS SDK 8.1: 31/03/2015
 //
 //
 //  The Cinder source code is used under the following terms:
