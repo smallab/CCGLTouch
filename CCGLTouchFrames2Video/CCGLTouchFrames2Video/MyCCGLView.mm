@@ -145,11 +145,12 @@
     if (writerInput.readyForMoreMediaData) {
         // Finish the session
         [writerInput markAsFinished];
-        [videoWriter finishWriting];                
-        CVPixelBufferPoolRelease(adaptor.pixelBufferPool);
-        [videoWriter release];
-        [writerInput release];
-        NSLog (@"Done writing opengl as movie");
+        [videoWriter finishWritingWithCompletionHandler:^{
+            CVPixelBufferPoolRelease(adaptor.pixelBufferPool);
+            [videoWriter release];
+            [writerInput release];
+            NSLog (@"Done writing opengl as movie");
+        }];
     }
 }
 
