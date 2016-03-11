@@ -381,6 +381,7 @@
 				CINDER_PATH = ../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchTabs/CCGLTouchTabs-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -414,6 +415,7 @@
 				CINDER_PATH = ../..;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCGLTouchTabs/CCGLTouchTabs-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
